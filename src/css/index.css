@@ -3,16 +3,14 @@
     border-bottom-color: #E5E5E5;
 }
 
-.wrapper{  padding: 20px 0px 10px 0px;  }
+.wrapper{  padding: 20px 5px 10px 5px;  }
 
-.subtitle1{
+.productName{
     color: #000000;
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
-    font-weight: 500;
-    border-bottom: 1px solid;
-    border-bottom-color: #000000;
-    }
+    font-weight: 400;
+}
 
 .subtitle2{
     color: #000000;
