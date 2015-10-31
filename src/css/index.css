@@ -1,0 +1,56 @@
+.title{
+    border-bottom: 1px solid;
+    border-bottom-color: #E5E5E5;
+}
+
+.wrapper{  padding: 20px 0px 10px 0px;  }
+
+.subtitle1{
+    color: #000000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    border-bottom: 1px solid;
+    border-bottom-color: #000000;
+    }
+
+.subtitle2{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.date{
+    color: #000000;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 200;
+}
+
+.contactMeInf{
+    font-size: 14px;
+    font-weight: 200;
+}
+
+
+.wrapperbtm{  padding-bottom: 10px;  }
+.wrapperProject{ padding: 2px 0 2px 0}
+
+.pegaProjectContents{  display: none;  }
+.pegaProject:hover{  color: rgba(130, 130, 130, 10);  }
+
+#imgUpBlackPega{display: inline-block}
+#imgDownBlackPega{display: none}
+
+.ntuProjectContents{  display: none;  }
+.ntuProject:hover{  color:  rgba(130, 130, 130, 10);  }
+
+#imgOpenNpI{display: none}
+#imgCloseNpI{display: inline-block}
+
+
+a:link {  color: black  }
+
+a:visited {  color: #761c19;  }
+
+a:hover {  color: darkorange;  }
