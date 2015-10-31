@@ -505,7 +505,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".title{\n    border-bottom: 1px solid;\n    border-bottom-color: #E5E5E5;\n}\n\n.wrapper{  padding: 20px 5px 10px 5px;  }\n\n.productName{\n    color: #000000;\n    font-size: 18px;\n    font-style: normal;\n    font-weight: 400;\n}\n\n.subtitle2{\n    color: #000000;\n    font-size: 16px;\n    font-weight: 300;\n}\n\n.date{\n    color: #000000;\n    font-size: 10px;\n    font-style: italic;\n    font-weight: 200;\n}\n\n.contactMeInf{\n    font-size: 14px;\n    font-weight: 200;\n}\n\n\n.wrapperbtm{  padding-bottom: 10px;  }\n.wrapperProject{ padding: 2px 0 2px 0}\n\n.pegaProjectContents{  display: none;  }\n.pegaProject:hover{  color: rgba(130, 130, 130, 10);  }\n\n#imgUpBlackPega{display: inline-block}\n#imgDownBlackPega{display: none}\n\n.ntuProjectContents{  display: none;  }\n.ntuProject:hover{  color:  rgba(130, 130, 130, 10);  }\n\n#imgOpenNpI{display: none}\n#imgCloseNpI{display: inline-block}\n\n\na:link {  color: black  }\n\na:visited {  color: #761c19;  }\n\na:hover {  color: darkorange;  }", ""]);
+	exports.push([module.id, ".title{\n    border-bottom: 1px solid;\n    border-bottom-color: #E5E5E5;\n}\n\n.wrapper{  padding: 20px 5px 10px 5px;  }\n\n\n\n.productName{\n    color: #000000;\n    font-size: 18px;\n    font-style: normal;\n    font-weight: 400;\n    padding: 10px 0 5px 0\n}\n\n.tableA{\n    width: 50px;\n    font-size: 16px;\n    font-weight: 400;\n    padding: 5px 0 0 0\n}\n\n.tableB{\n    width: 200px;\n    font-size: 16px;\n    font-weight: 300;\n    padding: 5px 0 0 0\n}\n\n.priceBig{\n    font-size: 18px;\n    font-weight: 400;\n    padding: 0 0 10px 0\n}\n\n.productTable{\n    padding: 10px 0 10px 0\n}", ""]);
 	
 	// exports
 
