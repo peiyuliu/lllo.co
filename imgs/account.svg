@@ -3,11 +3,22 @@
     <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
     <title>account</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.897826318   0 0 0 0 0.897826318   0 0 0 0 0.897826318  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="02-1-About-us" sketch:type="MSArtboardGroup" transform="translate(-279.000000, -51.000000)" stroke="#00BCD4" stroke-width="1.5">
+        <g id="02-1-About-us" sketch:type="MSArtboardGroup" transform="translate(-279.000000, -51.000000)">
             <g id="Main-Bar" sketch:type="MSLayerGroup" transform="translate(0.000000, 41.000000)">
-                <g id="account" transform="translate(280.000000, 11.000000)" sketch:type="MSShapeGroup">
+                <rect id="Rectangle-56" fill="#FFFFFF" filter="url(#filter-1)" sketch:type="MSShapeGroup" x="0" y="0" width="320" height="41"></rect>
+                <g id="account" transform="translate(280.000000, 11.000000)" stroke="#00BCD4" stroke-width="1.5" sketch:type="MSShapeGroup">
                     <ellipse id="Oval-133" cx="11.3915452" cy="6.3286362" rx="5.14456878" ry="6.3286362"></ellipse>
                     <path d="M11.4134256,12.6572724 C16.8263963,12.6572724 24.9658976,18.6677436 22.2393671,19.458876 C19.5128365,20.2500084 3.45543597,20.3821406 0.587484139,19.458876 C-2.28046769,18.5356115 6.00045487,12.6572724 11.4134256,12.6572724 Z" id="Triangle-1"></path>
                 </g>
