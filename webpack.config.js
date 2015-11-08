@@ -32,6 +32,11 @@ module.exports = {
                 test: /\.js?$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel?optional[]=runtime&stage=0'
+            },
+            {
+                test: /\.jsx$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'jsx-loader?insertPragma=React.DOM&harmony'
             }
         ]
     },
@@ -42,7 +47,9 @@ module.exports = {
         }),
         new webpack.ProvidePlugin({
             $: "jquery",
-            jQuery: "jquery"
+            jQuery: "jquery",
+            'React': 'react',
+            'ReactDOM': 'react-dom'
         })
     ]
 };

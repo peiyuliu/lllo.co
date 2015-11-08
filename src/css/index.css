@@ -1,70 +1,24 @@
-.title{
+#llloco{
+    height: 20px;
+}
+#basket{
+    height: 20px;
+}
+#account{
+    height: 22px;
+}
+#searchButton{
+    height: 70px;
+}
+.titleBar{
+    padding: 15px 0 10px 0;
     border-bottom: 1px solid #E5E5E5;
-
 }
-
-.wrapper{  padding: 20px 5px 10px 5px;  }
-
-.productName{
-    color: #000000;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    padding: 10px 0 5px 0
+.inputTest{
+    font-size: 15px ;
+    font-weight: 200;
+    color: #E5E5E5;
 }
-
-.priceBig{
-    font-size: 18px;
-    font-weight: 400;
-    padding: 0 0 10px 0
-}
-
-
-.productImg{
-    padding-bottom: 10px;
-}
-
-.produceInf{
-    border-bottom: 1px dashed rgb(150, 150, 150);
-}
-
-.infGroup{
-    padding: 0 0 5px 0
-}
-
-.infTitle{
-    font-size:14px;
-    font-weight: 800;
-}
-
-.infContent{
-    font-size:14px;
-    font-weight: 300;
-}
-
-
-.imgMinus{
-    height: 30px;
-    background-color: grey;
-    border-radius: 5px 0 0 5px;
-    padding: 13px 7px 14px 7px;
-    display: inline-block;
-}
-
-.imgPlus{
-    height: 30px;
-    background-color: grey;
-    border-radius: 0 5px 5px 0;
-    padding: 9px 7px 9px 7px;
-    display: inline-block;
-}
-
-.inputNumber{
-    height: 30px;
-    width: 40px;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
-    border-right:none;
-    border-left:none;
-    padding: 0;
+.searchTitle{
+    padding-top: 100px ;
 }
