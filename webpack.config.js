@@ -29,6 +29,10 @@ module.exports = {
                 loader: "style!css"
             },
             {
+                test: /\.svg$/,
+                loader: "babel!svg-react"
+            },
+            {
                 test: /\.js?$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel?optional[]=runtime&stage=0'

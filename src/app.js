@@ -2,7 +2,8 @@
 
 import "../node_modules/bootstrap/dist/css/bootstrap.css"
 import "../src/css/index.css"
-
+import BasketEmpty from 'babel!svg-react!../img/basketEmpty.svg?name=BasketEmpty'
+import Basket from 'babel!svg-react!../img/basket.svg?name=Basket'
 
 var CommentBox = React.createClass({
     render: function() {
@@ -100,10 +101,11 @@ var BasketButton = React.createClass({
         this.setState({liked: !this.state.liked});
     },
     render: function() {
-        var text = this.state.liked ? 'basketEmpty.svg' : 'basket.svg';
-        return (
-            <img id="basket" onClick={this.handleClick} src={'img/'+text} className="img-responsive pull-left"/>
-        );
+        if (this.state.liked === true) {
+            return <BasketEmpty onClick={this.handleClick} />
+        } else {
+            return <Basket onClick={this.handleClick} />
+        }
     }
 });
 

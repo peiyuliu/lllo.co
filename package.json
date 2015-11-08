@@ -10,7 +10,8 @@
     "material-ui": "^0.13.1",
     "randomcolor": "^0.4.0",
     "react": "^0.14.2",
-    "react-dom": "^0.14.2"
+    "react-dom": "^0.14.2",
+    "svg-react-loader": "^0.3.1"
   },
   "devDependencies": {
     "babel-core": "^5.8.25",
