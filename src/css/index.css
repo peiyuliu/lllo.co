@@ -1,18 +1,18 @@
 #llloco{
     height: 20px;
 }
-#basket{
-    height: 20px;
-}
-#account{
-    height: 22px;
-}
 #searchButton{
     height: 70px;
 }
 .titleBar{
     padding: 15px 0 10px 0;
     border-bottom: 1px solid #E5E5E5;
+}
+.basketButton{
+    height: 20px;
+}
+.accountButton{
+    height: 22px;
 }
 .inputTest{
     font-size: 15px ;

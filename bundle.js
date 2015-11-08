@@ -97,7 +97,7 @@
 	            React.createElement(
 	                "div",
 	                { className: "col-xs-2 col-md-2" },
-	                React.createElement(BasketButton, null)
+	                React.createElement(BasketButton, { className: "basketButton" })
 	            ),
 	            React.createElement(
 	                "div",
@@ -107,7 +107,7 @@
 	            React.createElement(
 	                "div",
 	                { className: "col-xs-2 col-md-2" },
-	                React.createElement(AccountButton, null),
+	                React.createElement(AccountButton, { className: "accountButton" }),
 	                React.createElement("test", null)
 	            )
 	        );
@@ -204,7 +204,7 @@
 	    },
 	    render: function render() {
 	        var text = this.state.liked ? 'basketEmpty.svg' : 'basket.svg';
-	        return React.createElement("img", { id: "basket", onClick: this.handleClick, src: 'img/' + text, className: "img-responsive pull-left" });
+	        return React.createElement("img", { onClick: this.handleClick, src: 'img/' + text, className: "img-responsive pull-left" });
 	    }
 	});
 	
@@ -219,7 +219,7 @@
 	    },
 	    render: function render() {
 	        var text = this.state.liked ? 'accountOut.svg' : 'accountIn.svg';
-	        return React.createElement("img", { id: "account", onClick: this.handleClick, src: 'img/' + text, className: "img-responsive pull-right" });
+	        return React.createElement("img", { onClick: this.handleClick, src: 'img/' + text, className: "img-responsive pull-right" });
 	    }
 	});
 	
@@ -20234,7 +20234,7 @@
 	
 	
 	// module
-	exports.push([module.id, "#llloco{\n    height: 20px;\n}\n#basket{\n    height: 20px;\n}\n#account{\n    height: 22px;\n}\n#searchButton{\n    height: 70px;\n}\n.titleBar{\n    padding: 15px 0 10px 0;\n    border-bottom: 1px solid #E5E5E5;\n}\n.inputTest{\n    font-size: 15px ;\n    font-weight: 200;\n    color: #E5E5E5;\n}\n.searchTitle{\n    padding-top: 100px ;\n}", ""]);
+	exports.push([module.id, "#llloco{\n    height: 20px;\n}\n#searchButton{\n    height: 70px;\n}\n.titleBar{\n    padding: 15px 0 10px 0;\n    border-bottom: 1px solid #E5E5E5;\n}\n.basketButton{\n    height: 20px;\n}\n.accountButton{\n    height: 22px;\n}\n.inputTest{\n    font-size: 15px ;\n    font-weight: 200;\n    color: #E5E5E5;\n}\n.searchTitle{\n    padding-top: 100px ;\n}", ""]);
 	
 	// exports
 
