@@ -29,13 +29,13 @@ var TitleBar = React.createClass({
         return (
             <div className="row titleBar">
                 <div className="col-xs-2 col-md-2">
-                    <BasketButton className="basketButton"/>
+                    <BasketButton />
                 </div>
                 <div className="col-xs-8 col-md-8">
                     <img id="llloco" src="img/llloco.svg" className="img-responsive center-block"/>
                 </div>
                 <div className="col-xs-2 col-md-2">
-                    <AccountButton className="accountButton"/>
+                    <AccountButton />
                     <test />
                 </div>
             </div>
@@ -102,7 +102,7 @@ var BasketButton = React.createClass({
     render: function() {
         var text = this.state.liked ? 'basketEmpty.svg' : 'basket.svg';
         return (
-            <img onClick={this.handleClick} src={'img/'+text} className="img-responsive pull-left"/>
+            <img id="basket" onClick={this.handleClick} src={'img/'+text} className="img-responsive pull-left"/>
         );
     }
 });
@@ -117,7 +117,7 @@ var AccountButton = React.createClass({
     render: function() {
         var text = this.state.liked ? 'accountOut.svg' : 'accountIn.svg';
         return (
-            <img onClick={this.handleClick} src={'img/'+text} className="img-responsive pull-right"/>
+            <img id="account" onClick={this.handleClick} src={'img/'+text} className="img-responsive pull-right"/>
         );
     }
 });
