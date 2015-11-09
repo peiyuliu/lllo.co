@@ -1,11 +1,9 @@
-#llloco{
+.llloco{
     height: 20px;
 }
-#basket{
-    height: 20px;
-}
-#account{
-    height: 22px;
+.iconA{
+    fill:white;
+    color:white;
 }
 #searchButton{
     height: 70px;
