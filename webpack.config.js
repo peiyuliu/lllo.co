@@ -49,11 +49,10 @@ module.exports = {
             filename: 'index.html',
             template: './src/html/index.html'
         }),
-        //new webpack.ProvidePlugin({
-        //    $: "jquery",
-        //    jQuery: "jquery",
-        //    'React': 'react',
-        //    'ReactDOM': 'react-dom'
-        //})
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            'React': 'react'
+        })
     ]
 };

@@ -9,7 +9,7 @@
     "material-ui": "^0.14.0",
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
-    "react-router": "^dev1.0.3",
+    "react-router": "^1.0.3",
     "react-tap-event-plugin": "^0.2.1"
   },
   "devDependencies": {
