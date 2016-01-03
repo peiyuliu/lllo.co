@@ -8,9 +8,11 @@ import Llloco from 'babel!svg-react!../img/llloco.svg?name=Llloco'
 import AccountOut from 'babel!svg-react!../img/accountOut.svg?name=AccountOut'
 import AccountIn from 'babel!svg-react!../img/accountIn.svg?name=AccountIn'
 
+import React from 'react'
+import { render } from 'react-dom'
+import { Router, Route, Link, browserHistory, IndexRoute} from 'react-router'
 
-
-var CommentBox = React.createClass({
+const App = React.createClass({
     render: function() {
         return (
             <div className="commentBox row">
@@ -18,20 +20,14 @@ var CommentBox = React.createClass({
                     <TitleBar />
                 </div>
                 <div className="col-xs-12">
-                    <FrontPage />
-                </div>
-                <div className="col-xs-12">
-                    <CommentList data={this.props.data} />
-                    <InputTest />
-                    <Test />
-
+                    {this.props.children}
                 </div>
             </div>
         );
     }
 });
 
-var TitleBar = React.createClass({
+const TitleBar = React.createClass({
     render: function(){
         return (
             <div className="row titleBar">
@@ -49,7 +45,7 @@ var TitleBar = React.createClass({
     }
 });
 
-var FrontPage = React.createClass({
+const FrontPage = React.createClass({
    render: function() {
        return (
            <div className="row">
@@ -66,7 +62,7 @@ var FrontPage = React.createClass({
    }
 });
 
-var InputTest = React.createClass({
+const InputTest = React.createClass({
     getInitialState: function() {
         return {value: 'Hello!'};
     },
@@ -79,7 +75,7 @@ var InputTest = React.createClass({
     }
 });
 
-var Test = React.createClass({
+const Test = React.createClass({
     render: function() {
         return(
             <div className="row">
@@ -98,7 +94,7 @@ var Test = React.createClass({
     }
 });
 
-var BasketButton = React.createClass({
+const BasketButton = React.createClass({
     getInitialState: function() {
         return {liked: true};
     },
@@ -108,21 +104,55 @@ var BasketButton = React.createClass({
     render: function() {
         if (this.state.liked === true) {
             return (
-                <div onClick={this.handleClick} className="pull-left">
-                    <Icons icon="cartAdd" size="25px" fill="#00BCD4" />
-                </div>
+                <Link to="/emptyCartPage">
+                    <div onClick={this.handleClick} className="pull-left">
+                        <Icons icon="cartAdd" size="25px" fill="#00BCD4" />
+                    </div>
+                </Link>
             )
         } else {
             return (
-                <div onClick={this.handleClick} className="pull-left">
-                    <Icons icon="cartFull" size="25px" fill="#00BCD4" />
-                </div>
+                <Link to="/cartPage">
+                    <div onClick={this.handleClick} className="pull-left">
+                        <Icons icon="cartFull" size="25px" fill="#00BCD4" />
+                    </div>
+                </Link>
             )
         }
     }
 });
 
-var AccountButton = React.createClass({
+const EmptyCartPage = React.createClass({
+    render: function() {
+        return (
+            <div className="commentBox row">
+                <div className="basketName center-block">
+                    購物車 empty
+                </div>
+                <div className="col-xs-12">
+                    {this.props.children}
+                </div>
+            </div>
+        );
+    }
+});
+
+const CartPage = React.createClass({
+    render: function() {
+        return (
+            <div className="commentBox row">
+                <div className="basketName center-block">
+                    購物車
+                </div>
+                <div className="col-xs-12">
+                    {this.props.children}
+                </div>
+            </div>
+        );
+    }
+});
+
+const AccountButton = React.createClass({
     getInitialState: function() {
         return {liked: true};
     },
@@ -146,11 +176,11 @@ var AccountButton = React.createClass({
     }
 });
 
-var CommentList = React.createClass({
+const Information = React.createClass({
     render: function() {
         var Mapfunction =  this.props.data.map(function(d){
             return (
-                <Comment subtitle={d.subtitle} text={d.text} />
+                <InformationList subtitle={d.subtitle} text={d.text} />
             )
         });
         return (
@@ -161,7 +191,7 @@ var CommentList = React.createClass({
     }
 });
 
-var Comment = React.createClass({
+const InformationList = React.createClass({
     render: function() {
         return(
             <div className="col-xs-6">
@@ -172,12 +202,12 @@ var Comment = React.createClass({
     }
 });
 
-var data = [
+const data = [
     {subtitle: "Summary", text: "Hello"},
     {subtitle: "Work Experience", text: "PEGA"},
 ];
 
-var Icons =  React.createClass({
+const Icons =  React.createClass({
     propTypes: {
         icon: React.PropTypes.string.isRequired,
         size: React.PropTypes.oneOfType([
@@ -243,7 +273,12 @@ var Icons =  React.createClass({
     }
 });
 
-ReactDOM.render(
-    <CommentBox data={data}/>,
-    document.getElementById('content')
-);
+render((
+    <Router history={browserHistory}>
+        <Route path="/" component={App}>
+            <IndexRoute component={FrontPage} />
+            <Route path="emptyCartPage" component={EmptyCartPage} />
+            <Route path="cartPage" component={CartPage} />
+        </Route>
+    </Router>
+), document.getElementById('content'))
