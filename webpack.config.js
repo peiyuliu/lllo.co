@@ -35,7 +35,7 @@ module.exports = {
             {
                 test: /\.js?$/,
                 exclude: /(node_modules|bower_components)/,
-                loader: 'babel?optional[]=runtime&stage=0'
+                loader: 'babel'
             },
             {
                 test: /\.jsx$/,
@@ -49,11 +49,11 @@ module.exports = {
             filename: 'index.html',
             template: './src/html/index.html'
         }),
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-            'React': 'react',
-            'ReactDOM': 'react-dom'
-        })
+        //new webpack.ProvidePlugin({
+        //    $: "jquery",
+        //    jQuery: "jquery",
+        //    'React': 'react',
+        //    'ReactDOM': 'react-dom'
+        //})
     ]
 };
