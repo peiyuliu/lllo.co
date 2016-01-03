@@ -3,10 +3,21 @@
     <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
     <title>Basket empty</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.897826318   0 0 0 0 0.897826318   0 0 0 0 0.897826318  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="02-1-About-us" sketch:type="MSArtboardGroup" transform="translate(-11.000000, -51.000000)">
+        <g id="02-3-Contect-us-send-a-massage" sketch:type="MSArtboardGroup" transform="translate(-11.000000, -51.000000)">
             <g id="Main-Bar" sketch:type="MSLayerGroup" transform="translate(0.000000, 41.000000)">
+                <rect id="Rectangle-56" fill="#FFFFFF" filter="url(#filter-1)" sketch:type="MSShapeGroup" x="0" y="0" width="320" height="41"></rect>
                 <g id="Basket-empty" transform="translate(11.000000, 11.000000)" sketch:type="MSShapeGroup">
                     <path d="M0.21911951,0 L6.2798211,0 L9.63645481,13.44 L25.5844245,13.44 L27.5628695,3.4273248" id="Path-259" stroke="#00BCD4" stroke-width="2"></path>
                     <ellipse id="Oval-99" fill="#00BCD4" cx="9.08108108" cy="17.1733333" rx="1.51351351" ry="1.49333333"></ellipse>

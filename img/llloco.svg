@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="69px" height="16px" viewBox="0 0 69 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>lo.co + l + l</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.897826318   0 0 0 0 0.897826318   0 0 0 0 0.897826318  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="02-3-Contect-us-send-a-massage" sketch:type="MSArtboardGroup" transform="translate(-126.000000, -54.000000)">
+            <g id="Main-Bar" sketch:type="MSLayerGroup" transform="translate(0.000000, 41.000000)">
+                <rect id="Rectangle-56" fill="#FFFFFF" filter="url(#filter-1)" sketch:type="MSShapeGroup" x="0" y="0" width="320" height="41"></rect>
+                <g id="lo.co-+-l-+-l" transform="translate(124.000000, 10.000000)" font-size="20" font-family="Andale Mono" sketch:type="MSTextLayer" font-weight="normal">
+                    <text id="lo.co" fill="#00BCD4">
+                        <tspan x="12" y="18">lo.co</tspan>
+                    </text>
+                    <text id="l" fill="#4DD0E1">
+                        <tspan x="6" y="18">l</tspan>
+                    </text>
+                    <text id="l" fill="#B2EBF2">
+                        <tspan x="0" y="18">l</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

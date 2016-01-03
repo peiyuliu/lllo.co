@@ -29,9 +29,18 @@ module.exports = {
                 loader: "style!css"
             },
             {
+                test: /\.svg$/,
+                loader: "babel!svg-react"
+            },
+            {
                 test: /\.js?$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel?optional[]=runtime&stage=0'
+            },
+            {
+                test: /\.jsx$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'jsx-loader?insertPragma=React.DOM&harmony'
             }
         ]
     },
@@ -40,5 +49,11 @@ module.exports = {
             filename: 'index.html',
             template: './src/html/index.html'
         }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            'React': 'react',
+            'ReactDOM': 'react-dom'
+        })
     ]
 };
