@@ -11,7 +11,7 @@ import { Router, Route, Link, browserHistory, IndexRoute} from 'react-router'
 
 import { BasketButton, EmptyCartPage, CartPage} from '../src/componets/cartPage.js'
 import { AccountButton, AccountPage, AccountLogIn} from '../src/componets/accountPage.js'
-import { FrontPage, LllocoButton} from '../src/componets/homePage.js'
+import { FrontPage, LllocoButton, SearchButton, SearchPage} from '../src/componets/homePage.js'
 
 const App = React.createClass({
     render: function() {
@@ -48,18 +48,7 @@ const TitleBar = React.createClass({
 
 
 
-const InputTest = React.createClass({
-    getInitialState: function() {
-        return {value: 'Hello!'};
-    },
-    handleChange: function(event) {
-        this.setState({value: event.target.value});
-    },
-    render: function() {
-        var value = this.state.value;
-        return <input className="inputTest" type="text" value={value} onChange={this.handleChange} />;
-    }
-});
+
 
 const Test = React.createClass({
     render: function() {
@@ -116,6 +105,7 @@ render((
     <Router history={browserHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={FrontPage} />
+            <Route path="searchPage" component={SearchPage} />
             <Route path="emptyCartPage" component={EmptyCartPage} />
             <Route path="cartPage" component={CartPage} />
             <Route path="accountLogIn" component={AccountLogIn} />
