@@ -3,14 +3,13 @@
 import "../node_modules/bootstrap/dist/css/bootstrap.css"
 import "../src/css/index.css"
 
-
-
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, Link, browserHistory, IndexRoute} from 'react-router'
-
-import { BasketButton, EmptyCartPage, CartPage} from '../src/componets/cartPage.js'
-import { AccountButton, AccountPage, AccountLogIn} from '../src/componets/accountPage.js'
+import { Router, Route, Link, hasHistory, IndexRoute} from 'react-router'
+import { Icons } from '../src/componets/icons.js'
+import { BasketPage, EmptyCartPage, CartPage, WishListsPage} from '../src/componets/basketPage.js'
+import { AccountLogInPage, AccountKeyInPage} from '../src/componets/accountLogInPage.js'
+import { AccountPage, AccountInfPage, OrderInfPage} from '../src/componets/accountPage.js'
 import { FrontPage, LllocoButton, SearchButton, SearchPage} from '../src/componets/homePage.js'
 
 const App = React.createClass({
@@ -20,7 +19,7 @@ const App = React.createClass({
                 <div className="col-xs-12 col-md-8 col-md-offset-2">
                     <TitleBar />
                 </div>
-                <div className="col-xs-12">
+                <div className="col-xs-12 col-md-8 col-md-offset-2">
                     {this.props.children}
                 </div>
             </div>
@@ -46,9 +45,55 @@ const TitleBar = React.createClass({
     }
 });
 
+export const BasketButton = React.createClass({
+    getInitialState: function() {
+        return {empty: true};
+    },
+    render: function() {
+        if (this.state.empty === true) {
+            return (
+                <Link to="/emptyCartPage">
+                    <div className="pull-left">
+                        <Icons icon="cartAdd" size="25px" fill="#00BCD4" />
+                    </div>
+                </Link>
+            )
+        } else {
+            return (
+                <Link to="/cartPage">
+                    <div className="pull-left">
+                        <Icons icon="cartFull" size="25px" fill="#00BCD4" />
+                    </div>
+                </Link>
+            )
+        }
+    }
+});
 
-
-
+export const AccountButton = React.createClass({
+    getInitialState: function() {
+        return {logIn: true};
+    },
+    render: function() {
+        if (this.state.logIn === true) {
+            return (
+                <Link to="/accountLogInPage">
+                    <div className="pull-right">
+                        <Icons icon="accountOut" size="25px" fill="#00BCD4" />
+                    </div>
+                </Link>
+            )
+        } else {
+            return (
+                <Link to="/accountPage">
+                    <div className="pull-right">
+                        <Icons icon="accountIn" size="25px" fill="#00BCD4" />
+                    </div>
+                </Link>
+            )
+        }
+    }
+});
 
 const Test = React.createClass({
     render: function() {
@@ -102,14 +147,22 @@ const data = [
 
 
 render((
-    <Router history={browserHistory}>
+    <Router history={hasHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={FrontPage} />
-            <Route path="searchPage" component={SearchPage} />
-            <Route path="emptyCartPage" component={EmptyCartPage} />
-            <Route path="cartPage" component={CartPage} />
-            <Route path="accountLogIn" component={AccountLogIn} />
-            <Route path="accountPage" component={AccountPage} />
+            <Route path="/searchPage" component={SearchPage} />
+            <Route path="/basketPage" component={BasketPage}>
+                <Route path="/cartPage" component={CartPage} />
+                <Route path="/emptyCartPage" component={EmptyCartPage} />
+                <Route path="/wishListsPage" component={WishListsPage} />
+            </Route>
+            <Route path="/accountLogInPage" component={AccountLogInPage} >
+                <Route path="/accountKeyInPage" component={AccountKeyInPage} />
+            </Route>
+            <Route path="/accountPage" component={AccountPage} >
+                <Route path="/accountInfPage" component={AccountInfPage} />
+                <Route path="/orderInfPage" component={OrderInfPage} />
+            </Route>
         </Route>
     </Router>
 ), document.getElementById('content'))
