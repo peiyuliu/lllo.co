@@ -34,7 +34,7 @@ const CartButton = React.createClass({
     render: function() {
         if (this.state.empty === true) {
             return (
-                <Link to="/emptyCartPage">
+                <Link to="/basketPage/emptyCartPage">
                     <div className="pull-left">
                         <div className="cartButton">購物車</div>
                     </div>
@@ -42,7 +42,7 @@ const CartButton = React.createClass({
             )
         } else {
             return (
-                <Link to="/cartPage">
+                <Link to="/basketPage/cartPage">
                     <div className="pull-left">
                         <div className="cartButton">購物車</div>
                     </div>
@@ -82,7 +82,7 @@ export const CartPage = React.createClass({
 const WishListsButton = React.createClass({
     render: function() {
         return(
-            <Link to="/wishListsPage">
+            <Link to="/basketPage/wishListsPage">
                 <div className="pull-left">
                     <div className="wishListsButton">收藏清單</div>
                 </div>

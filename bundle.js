@@ -56,7 +56,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.AccountButton = exports.BasketButton = undefined;
+	exports.AccountButton = exports.BasketButton = exports.App = undefined;
 	
 	__webpack_require__(2);
 	
@@ -84,7 +84,7 @@
 	
 	//CSS
 	
-	var App = _react2.default.createClass({
+	var App = exports.App = _react2.default.createClass({
 	    displayName: "App",
 	
 	    render: function render() {
@@ -141,7 +141,7 @@
 	        if (this.state.empty === true) {
 	            return _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: "/emptyCartPage" },
+	                { to: "/basketPage/emptyCartPage" },
 	                _react2.default.createElement(
 	                    "div",
 	                    { className: "pull-left" },
@@ -151,7 +151,7 @@
 	        } else {
 	            return _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: "/cartPage" },
+	                { to: "/basketPage/cartPage" },
 	                _react2.default.createElement(
 	                    "div",
 	                    { className: "pull-left" },
@@ -182,7 +182,7 @@
 	        } else {
 	            return _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: "/accountPage" },
+	                { to: "/accountPage/accountInfPage" },
 	                _react2.default.createElement(
 	                    "div",
 	                    { className: "pull-right" },
@@ -272,7 +272,7 @@
 	
 	(0, _reactDom.render)(_react2.default.createElement(
 	    _reactRouter.Router,
-	    { history: _reactRouter.hasHistory },
+	    { history: _reactRouter.browserHistory },
 	    _react2.default.createElement(
 	        _reactRouter.Route,
 	        { path: "/", component: App },
@@ -281,20 +281,17 @@
 	        _react2.default.createElement(
 	            _reactRouter.Route,
 	            { path: "/basketPage", component: _basketPage.BasketPage },
-	            _react2.default.createElement(_reactRouter.Route, { path: "/cartPage", component: _basketPage.CartPage }),
-	            _react2.default.createElement(_reactRouter.Route, { path: "/emptyCartPage", component: _basketPage.EmptyCartPage }),
-	            _react2.default.createElement(_reactRouter.Route, { path: "/wishListsPage", component: _basketPage.WishListsPage })
+	            _react2.default.createElement(_reactRouter.Route, { path: "/basketPage/cartPage", component: _basketPage.CartPage }),
+	            _react2.default.createElement(_reactRouter.Route, { path: "/basketPage/emptyCartPage", component: _basketPage.EmptyCartPage }),
+	            _react2.default.createElement(_reactRouter.Route, { path: "/basketPage/wishListsPage", component: _basketPage.WishListsPage })
 	        ),
-	        _react2.default.createElement(
-	            _reactRouter.Route,
-	            { path: "/accountLogInPage", component: _accountLogInPage.AccountLogInPage },
-	            _react2.default.createElement(_reactRouter.Route, { path: "/accountKeyInPage", component: _accountLogInPage.AccountKeyInPage })
-	        ),
+	        _react2.default.createElement(_reactRouter.Route, { path: "/accountLogInPage", component: _accountLogInPage.AccountLogInPage }),
+	        _react2.default.createElement(_reactRouter.Route, { path: "/accountKeyInPage", component: _accountLogInPage.AccountKeyInPage }),
 	        _react2.default.createElement(
 	            _reactRouter.Route,
 	            { path: "/accountPage", component: _accountPage.AccountPage },
-	            _react2.default.createElement(_reactRouter.Route, { path: "/accountInfPage", component: _accountPage.AccountInfPage }),
-	            _react2.default.createElement(_reactRouter.Route, { path: "/orderInfPage", component: _accountPage.OrderInfPage })
+	            _react2.default.createElement(_reactRouter.Route, { path: "/accountPage/accountInfPage", component: _accountPage.AccountInfPage }),
+	            _react2.default.createElement(_reactRouter.Route, { path: "/accountPage/orderInfPage", component: _accountPage.OrderInfPage })
 	        )
 	    )
 	), document.getElementById('content'));
@@ -24774,7 +24771,7 @@
 	        if (this.state.empty === true) {
 	            return React.createElement(
 	                _reactRouter.Link,
-	                { to: '/emptyCartPage' },
+	                { to: '/basketPage/emptyCartPage' },
 	                React.createElement(
 	                    'div',
 	                    { className: 'pull-left' },
@@ -24788,7 +24785,7 @@
 	        } else {
 	            return React.createElement(
 	                _reactRouter.Link,
-	                { to: '/cartPage' },
+	                { to: '/basketPage/cartPage' },
 	                React.createElement(
 	                    'div',
 	                    { className: 'pull-left' },
@@ -24846,7 +24843,7 @@
 	    render: function render() {
 	        return React.createElement(
 	            _reactRouter.Link,
-	            { to: '/wishListsPage' },
+	            { to: '/basketPage/wishListsPage' },
 	            React.createElement(
 	                'div',
 	                { className: 'pull-left' },
@@ -26109,21 +26106,13 @@
 	            { className: 'row' },
 	            React.createElement(
 	                'div',
-	                { className: 'commentBox col-xs-12' },
-	                React.createElement(
-	                    'div',
-	                    null,
-	                    '輸入會員資料'
-	                )
+	                { className: 'col-xs-12' },
+	                '輸入會員資料'
 	            ),
 	            React.createElement(
 	                'div',
 	                { className: 'col-xs-12' },
-	                React.createElement(
-	                    'div',
-	                    { className: 'email' },
-	                    'E-mail'
-	                )
+	                'E-mail'
 	            ),
 	            React.createElement(
 	                'div',
@@ -26133,11 +26122,7 @@
 	            React.createElement(
 	                'div',
 	                { className: 'col-xs-12' },
-	                React.createElement(
-	                    'div',
-	                    { className: 'email' },
-	                    'Password'
-	                )
+	                'Password'
 	            ),
 	            React.createElement(
 	                'div',
@@ -26147,11 +26132,7 @@
 	            React.createElement(
 	                'div',
 	                { className: 'col-xs-12' },
-	                React.createElement(
-	                    'div',
-	                    { className: 'email' },
-	                    'Name'
-	                )
+	                'Name'
 	            ),
 	            React.createElement(
 	                'div',
@@ -26600,7 +26581,7 @@
 	    render: function render() {
 	        return React.createElement(
 	            _reactRouter.Link,
-	            { to: '/accountInfPage' },
+	            { to: '/accountPage/accountInfPage' },
 	            React.createElement(
 	                'div',
 	                { className: 'pull-left' },
@@ -26671,7 +26652,7 @@
 	    render: function render() {
 	        return React.createElement(
 	            _reactRouter.Link,
-	            { to: '/orderInfPage' },
+	            { to: '/accountPage/orderInfPage' },
 	            React.createElement(
 	                'div',
 	                { className: 'pull-left' },

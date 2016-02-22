@@ -84,23 +84,23 @@ export const AccountKeyInPage = React.createClass({
     render: function() {
         return (
             <div className="row">
-                <div className="commentBox col-xs-12">
-                    <div>輸入會員資料</div>
+                <div className="col-xs-12">
+                    輸入會員資料
                 </div>
                 <div className="col-xs-12">
-                    <div className="email">E-mail</div>
+                    E-mail
                 </div>
                 <div className="col-xs-12">
                     <EmailInput/>
                 </div>
                 <div className="col-xs-12">
-                    <div className="email">Password</div>
+                    Password
                 </div>
                 <div className="col-xs-12">
                     <PasswordInput/>
                 </div>
                 <div className="col-xs-12">
-                    <div className="email">Name</div>
+                    Name
                 </div>
                 <div className="col-xs-12">
                     <NameInput/>

@@ -5,14 +5,14 @@ import "../src/css/index.css"
 
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, Link, hasHistory, IndexRoute} from 'react-router'
+import { Router, Route, Link, browserHistory, IndexRoute} from 'react-router'
 import { Icons } from '../src/componets/icons.js'
 import { BasketPage, EmptyCartPage, CartPage, WishListsPage} from '../src/componets/basketPage.js'
 import { AccountLogInPage, AccountKeyInPage} from '../src/componets/accountLogInPage.js'
 import { AccountPage, AccountInfPage, OrderInfPage} from '../src/componets/accountPage.js'
 import { FrontPage, LllocoButton, SearchButton, SearchPage} from '../src/componets/homePage.js'
 
-const App = React.createClass({
+export const App = React.createClass({
     render: function() {
         return (
             <div className="app row">
@@ -52,7 +52,7 @@ export const BasketButton = React.createClass({
     render: function() {
         if (this.state.empty === true) {
             return (
-                <Link to="/emptyCartPage">
+                <Link to="/basketPage/emptyCartPage">
                     <div className="pull-left">
                         <Icons icon="cartAdd" size="25px" fill="#00BCD4" />
                     </div>
@@ -60,7 +60,7 @@ export const BasketButton = React.createClass({
             )
         } else {
             return (
-                <Link to="/cartPage">
+                <Link to="/basketPage/cartPage">
                     <div className="pull-left">
                         <Icons icon="cartFull" size="25px" fill="#00BCD4" />
                     </div>
@@ -85,7 +85,7 @@ export const AccountButton = React.createClass({
             )
         } else {
             return (
-                <Link to="/accountPage">
+                <Link to="/accountPage/accountInfPage">
                     <div className="pull-right">
                         <Icons icon="accountIn" size="25px" fill="#00BCD4" />
                     </div>
@@ -147,22 +147,22 @@ const data = [
 
 
 render((
-    <Router history={hasHistory}>
+    <Router history={browserHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={FrontPage} />
             <Route path="/searchPage" component={SearchPage} />
             <Route path="/basketPage" component={BasketPage}>
-                <Route path="/cartPage" component={CartPage} />
-                <Route path="/emptyCartPage" component={EmptyCartPage} />
-                <Route path="/wishListsPage" component={WishListsPage} />
+                <Route path="/basketPage/cartPage" component={CartPage} />
+                <Route path="/basketPage/emptyCartPage" component={EmptyCartPage} />
+                <Route path="/basketPage/wishListsPage" component={WishListsPage} />
             </Route>
-            <Route path="/accountLogInPage" component={AccountLogInPage} >
-                <Route path="/accountKeyInPage" component={AccountKeyInPage} />
-            </Route>
+            <Route path="/accountLogInPage" component={AccountLogInPage} />
+            <Route path="/accountKeyInPage" component={AccountKeyInPage} />
             <Route path="/accountPage" component={AccountPage} >
-                <Route path="/accountInfPage" component={AccountInfPage} />
-                <Route path="/orderInfPage" component={OrderInfPage} />
+                <Route path="/accountPage/accountInfPage" component={AccountInfPage} />
+                <Route path="/accountPage/orderInfPage" component={OrderInfPage} />
             </Route>
         </Route>
+
     </Router>
 ), document.getElementById('content'))

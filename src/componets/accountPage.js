@@ -30,7 +30,7 @@ export const AccountPage = React.createClass({
 const AccountInfButton = React.createClass({
     render: function() {
         return(
-            <Link to="/accountInfPage">
+            <Link to="/accountPage/accountInfPage">
                 <div className="pull-left">
                     <div className="accountInfButton">會員資料</div>
                 </div>
@@ -59,7 +59,7 @@ export const AccountInfPage = React.createClass({
 const OrderInfButton = React.createClass({
     render: function() {
         return(
-            <Link to="/orderInfPage">
+            <Link to="/accountPage/orderInfPage">
                 <div className="pull-left">
                     <div className="orderInfButton">訂單資訊</div>
                 </div>
