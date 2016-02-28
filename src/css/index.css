@@ -1,22 +1,96 @@
-.llloco{
-    height: 20px;
-}
-.iconA{
-    fill:white;
-    color:white;
-}
-#searchButton{
-    height: 70px;
-}
+/* homePage */
+
 .titleBar{
     padding: 15px 0 10px 0;
     border-bottom: 1px solid #E5E5E5;
 }
-.inputTest{
-    font-size: 15px ;
+.llloco{
+    height: 23px;
+}
+.bButton{
+    padding: 0 5px 0 5px;
+}
+.aButton{
+    padding: 0 5px 0 15px;
+}
+
+.searchTitle{
+    padding-top: 150px ;
+}
+.textHelpBuy{
+    color: #00BCD4;
+    font-size: 18px;
+    padding: 0 0 10px 0;
+}
+#searchButton{
+    height: 70px;
+}
+
+/* SearchPage */
+
+.searchBarL{
+    padding: 15px 0 0 0;
+}
+.inputBar{
+    /*background-color: blue;*/
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.inputBarL{
+    font-size: 19px ;
     font-weight: 200;
     color: #9B9B9B;
+    padding-left: 10px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid blue;
+    height: 40px;
 }
-.searchTitle{
-    padding-top: 100px ;
+
+#searchIconBig{
+    height: 40px;
+    width: 40px;
+    padding: 5px 5px 5px 5px;
+    background-color: blue;
+    border-radius: 0 5px 5px 0;
+ }
+
+.inputBarL, #searchIconBig {
+    vertical-align:middle;
+    box-sizing:border-box
 }
+
+/* aboutPage*/
+
+.aboutUsLinkBar{
+    padding-top: 200px ;
+    padding-bottom: 20px ;
+}
+.aboutUsBar{
+    border-top: 1px solid #E5E5E5;
+    padding: 5px 0 0 0;
+}
+.aboutUsLink{
+    color: grey;
+}
+.aboutUsAllContent{
+    padding: 0 0 10px 0;
+}
+
+/* basketPage */
+
+.pageTitle{
+    padding: 5px 0 10px 0;
+}
+.buttonY{
+    color: white;
+    background-color: black;
+}
+.buttonN{
+    color:black;
+    background-color: white;
+}
+
+

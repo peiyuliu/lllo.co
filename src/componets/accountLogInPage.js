@@ -1,13 +1,12 @@
-import AccountOut from 'babel!svg-react!../../img/accountOut.svg?name=AccountOut'
-import AccountIn from 'babel!svg-react!../../img/accountIn.svg?name=AccountIn'
 
-import {Link} from 'react-router'
-import {Icons} from '../../src/componets/icons.js'
-import {AccountButton} from '../../src/app.js'
-import {FrontPage} from '../../src/componets/homePage.js'
+import { Component } from 'react'
+import { Link } from 'react-router'
 
-export const AccountLogInPage = React.createClass({
-    render: function() {
+import { AccountButton } from '../../src/componets/homePage.js'
+import { FrontPage } from '../../src/componets/homePage.js'
+
+export class AccountLogInPage extends Component {
+    render() {
         return (
             <div className="row">
                 <div className="commentBox col-xs-12">
@@ -31,39 +30,42 @@ export const AccountLogInPage = React.createClass({
             </div>
         );
     }
-});
+}
 
-const EmailInput = React.createClass({
-    getInitialState: function() {
-        return {value: 'lllo.co@gmail.com'};
-    },
-    handleChange: function(event) {
+class EmailInput extends Component {
+    constructor() {
+        super();
+        this.state = {value: 'lllo.co@gmail.com'};
+    }
+    handleChange(event) {
         this.setState({value: event.target.value});
-    },
-    render: function() {
+    }
+    render() {
         var value = this.state.value;
         return <input className="inputTest" type="text" value={value} onChange={this.handleChange} />;
     }
-});
+}
 
-const PasswordInput = React.createClass({
-    getInitialState: function() {
-        return {value: '12345678'};
-    },
-    handleChange: function(event) {
+class PasswordInput extends Component {
+    constructor() {
+        super();
+        this.state = {value: '12345678'};
+    }
+    handleChange(event) {
         this.setState({value: event.target.value});
-    },
-    render: function() {
+    }
+    render() {
         var value = this.state.value;
         return <input className="inputTest" type="text" value={value} onChange={this.handleChange} />;
     }
-});
+}
 
-const LogInSignInButton = React.createClass({
-    getInitialState: function() {
-        return {empty: true};
-    },
-    render: function() {
+class LogInSignInButton extends Component {
+    constructor() {
+        super();
+        this.state = {empty: true};
+    }
+    render() {
         if (this.state.empty === true) {
             return (
                 <Link to="/">
@@ -78,10 +80,10 @@ const LogInSignInButton = React.createClass({
             )
         }
     }
-});
+}
 
-export const AccountKeyInPage = React.createClass({
-    render: function() {
+export class AccountKeyInPage extends Component {
+    render() {
         return (
             <div className="row">
                 <div className="col-xs-12">
@@ -111,17 +113,18 @@ export const AccountKeyInPage = React.createClass({
             </div>
         );
     }
-});
+}
 
-const NameInput = React.createClass({
-    getInitialState: function() {
-        return {value: 'Lllo.co'};
-    },
-    handleChange: function(event) {
+class NameInput extends Component {
+    constructor() {
+        super();
+        this.state = {value: 'Lllo.co'};
+    }
+    handleChange(event) {
         this.setState({value: event.target.value});
-    },
-    render: function() {
+    }
+    render() {
         var value = this.state.value;
         return <input className="inputTest" type="text" value={value} onChange={this.handleChange} />;
     }
-});
+}

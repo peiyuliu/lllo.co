@@ -1,12 +1,11 @@
-import AccountOut from 'babel!svg-react!../../img/accountOut.svg?name=AccountOut'
-import AccountIn from 'babel!svg-react!../../img/accountIn.svg?name=AccountIn'
 
-import {Link} from 'react-router'
-import {Icons} from '../../src/componets/icons.js'
-import {AccountButton} from '../../src/app.js'
+import { Component } from 'react'
+import { Link } from 'react-router'
 
-export const AccountPage = React.createClass({
-    render: function() {
+import { AccountButton } from '../../src/componets/homePage.js'
+
+export class AccountPage extends Component {
+    render() {
         return (
             <div className="row">
                 <div className="commentBox col-xs-12">
@@ -25,10 +24,10 @@ export const AccountPage = React.createClass({
             </div>
         );
     }
-});
+}
 
-const AccountInfButton = React.createClass({
-    render: function() {
+class AccountInfButton extends Component {
+    render() {
         return(
             <Link to="/accountPage/accountInfPage">
                 <div className="pull-left">
@@ -37,10 +36,10 @@ const AccountInfButton = React.createClass({
             </Link>
         )
     }
-});
+}
 
-export const AccountInfPage = React.createClass({
-    render: function() {
+export class AccountInfPage extends Component {
+    render() {
         return (
             <div className="row">
                 <div className="col-xs-12">E-mail</div>
@@ -54,10 +53,10 @@ export const AccountInfPage = React.createClass({
             </div>
         );
     }
-});
+}
 
-const OrderInfButton = React.createClass({
-    render: function() {
+class OrderInfButton extends Component {
+    render() {
         return(
             <Link to="/accountPage/orderInfPage">
                 <div className="pull-left">
@@ -66,10 +65,10 @@ const OrderInfButton = React.createClass({
             </Link>
         )
     }
-});
+}
 
-export const OrderInfPage = React.createClass({
-    render: function() {
+export class OrderInfPage extends Component {
+    render() {
         return (
             <div className="row">
                 <div className="col-xs-12">1</div>
@@ -78,4 +77,4 @@ export const OrderInfPage = React.createClass({
             </div>
         );
     }
-});
+}

@@ -1,21 +1,65 @@
-import BasketEmpty from 'babel!svg-react!../../img/basketEmpty.svg?name=BasketEmpty'
-import Basket from 'babel!svg-react!../../img/basket.svg?name=Basket'
 
-import {Link} from 'react-router'
-import {Icons} from '../../src/componets/icons.js'
-import {BasketButton} from '../../src/app.js'
+import { Component } from 'react'
+import { Link } from 'react-router'
+import { BasketButton } from '../../src/componets/homePage.js'
 
-export const BasketPage = React.createClass({
-    render: function() {
+export class BasketPage extends Component {
+    constructor() {
+        super();
+        this.state = { empty: true };
+    }
+    render() {
+        if (this.state.empty === true) {
+            return (
+                <div className="row">
+                    <div className="col-xs-12 pageTitle">
+                        <div className="row">
+                            <div className="col-xs-6">
+                                <CartButtonY/>
+                            </div>
+                            <div className="col-xs-6">
+                                <WishListsButtonN/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xs-12">
+                        <EmptyCartPage />
+                    </div>
+                </div>
+            )
+        } else {
+            return (
+                <div className="row">
+                    <div className="pageTitle col-xs-12">
+                        <div className="row">
+                            <div className="col-xs-6">
+                                <CartButtonY/>
+                            </div>
+                            <div className="col-xs-6">
+                                <WishListsButtonN/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xs-12">
+                        <CartPage />
+                    </div>
+                </div>
+            )
+        }
+    }
+}
+
+export class WishListsPage extends Component {
+    render() {
         return (
             <div className="row">
-                <div className="commentBox col-xs-12">
+                <div className="pageTitle col-xs-12">
                     <div className="row">
                         <div className="col-xs-6">
-                            <CartButton/>
+                            <CartButtonN/>
                         </div>
                         <div className="col-xs-6">
-                            <WishListsButton/>
+                            <WishListsButtonY/>
                         </div>
                     </div>
                 </div>
@@ -25,35 +69,38 @@ export const BasketPage = React.createClass({
             </div>
         );
     }
-});
+}
 
-const CartButton = React.createClass({
-    getInitialState: function() {
-        return {empty: true};
-    },
-    render: function() {
-        if (this.state.empty === true) {
-            return (
-                <Link to="/basketPage/emptyCartPage">
-                    <div className="pull-left">
-                        <div className="cartButton">購物車</div>
+export class CartButtonY extends Component {
+    render() {
+        return (
+            <Link to="/basketPage">
+                <div className="row">
+                    <div className="buttonY col-xs-12 text-center">
+                        Cart
                     </div>
-                </Link>
-            )
-        } else {
-            return (
-                <Link to="/basketPage/cartPage">
-                    <div className="pull-left">
-                        <div className="cartButton">購物車</div>
-                    </div>
-                </Link>
-            )
-        }
+                </div>
+            </Link>
+        )
     }
-});
+}
 
-export const EmptyCartPage = React.createClass({
-    render: function() {
+export class CartButtonN extends Component {
+    render() {
+        return (
+            <Link to="/basketPage">
+                <div className="row">
+                    <div className="buttonN col-xs-12 text-center">
+                        Cart
+                    </div>
+                </div>
+            </Link>
+        )
+    }
+}
+
+export class EmptyCartPage extends Component {
+    render() {
         return (
             <div className="row">
                 <div className="col-xs-12">
@@ -62,43 +109,46 @@ export const EmptyCartPage = React.createClass({
             </div>
         );
     }
-});
+}
 
-export const CartPage = React.createClass({
-    render: function() {
+export class CartPage extends Component {
+    render() {
         return (
             <div className="row">
-                <div className="col-xs-12">
-                    Product 1
-                </div>
                 <div className="col-xs-12">
                     {this.props.children}
                 </div>
             </div>
         );
     }
-});
+}
 
-const WishListsButton = React.createClass({
-    render: function() {
+class WishListsButtonY extends Component {
+    render() {
         return(
-            <Link to="/basketPage/wishListsPage">
-                <div className="pull-left">
-                    <div className="wishListsButton">收藏清單</div>
+            <Link to="/wishListsPage" >
+                <div className="row">
+                    <div className="buttonY col-xs-12 text-center">
+                        Wish Lists
+                    </div>
                 </div>
             </Link>
-            )
+        )
     }
-});
+}
 
-export const WishListsPage = React.createClass({
-    render: function() {
-        return (
-            <div className="row">
-                <div className="col-xs-12">
-                    Wish Lists
+class WishListsButtonN extends Component {
+    render() {
+        return(
+            <Link to="/wishListsPage" >
+                <div className="row">
+                    <div className="buttonN col-xs-12 text-center">
+                        Wish Lists
+                    </div>
                 </div>
-            </div>
-        );
+            </Link>
+        )
     }
-});
+}
+
+
