@@ -1,21 +1,18 @@
 /* homePage */
 
 .titleBar{
-    padding: 15px 0 10px 0;
+    padding: 15px 0 10px 10px;
     border-bottom: 1px solid #E5E5E5;
 }
 .llloco{
     height: 23px;
 }
 .bButton{
-    padding: 0 5px 0 5px;
+    padding: 0 25px 0 5px;
 }
-.aButton{
-    padding: 0 5px 0 15px;
-}
-
-.searchTitle{
+.frontPage{
     padding-top: 150px ;
+    padding-bottom: 200px;
 }
 .textHelpBuy{
     color: #00BCD4;
@@ -28,69 +25,117 @@
 
 /* SearchPage */
 
-.searchBarL{
-    padding: 15px 0 0 0;
+.searchPage{
+    padding-top: 100px;
+    padding-bottom: 150px;
 }
-.inputBar{
-    /*background-color: blue;*/
+.searchBar{
+    padding: 15px 0 0 0;
 }
 
 textarea:focus, input:focus{
     outline: none;
 }
 
-.inputBarL{
-    font-size: 19px ;
-    font-weight: 200;
+.inputBarL {
+    font-size: 19px;
+    font-family: "Andale Mono", Monaco, serif;
     color: #9B9B9B;
     padding-left: 10px;
-    border-radius: 5px 0 0 5px;
-    border: 1px solid blue;
+    border-radius: 5px;
+    border: 1px solid #00BCD4;
     height: 40px;
+    width: 200px;
 }
-
 #searchIconBig{
-    height: 40px;
-    width: 40px;
-    padding: 5px 5px 5px 5px;
-    background-color: blue;
-    border-radius: 0 5px 5px 0;
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+    background-color: #00BCD4;
+    border-radius: 10px;
  }
 
-.inputBarL, #searchIconBig {
-    vertical-align:middle;
-    box-sizing:border-box
-}
+
 
 /* aboutPage*/
 
-.aboutUsLinkBar{
-    padding-top: 200px ;
-    padding-bottom: 20px ;
-}
-.aboutUsBar{
-    border-top: 1px solid #E5E5E5;
-    padding: 5px 0 0 0;
-}
 .aboutUsLink{
+    border-top: 1px solid #E5E5E5;
+    padding: 5px 0 20px 0;
+
+}
+.aboutUsText{
     color: grey;
 }
-.aboutUsAllContent{
-    padding: 0 0 10px 0;
+.aboutUsAll{
+    padding-bottom: 10px;
 }
-
+.aboutUsBox{
+    padding-bottom: 5px;
+}
 /* basketPage */
 
 .pageTitle{
-    padding: 5px 0 10px 0;
+    padding: 10px 0 10px 0;
+}
+.page{
+    padding: 0 20px 0 20px;
 }
 .buttonY{
     color: white;
-    background-color: black;
+    background-color: #00BCD4;
+    font-size: 16px;
+    padding: 7px 0 7px 0;
+    border-bottom: 2px solid #00BCD4;
 }
 .buttonN{
-    color:black;
+    color: #00BCD4;
     background-color: white;
+    font-size: 16px;
+    padding: 7px 0 7px 0;
+    border-bottom: 2px solid #00BCD4;
 }
 
-
+/*ProductPage*/
+.productBox{
+    border: 1px solid black;
+    padding: 0 0 0 0 ;
+}
+.productItem{
+    padding: 0 5px 0 5px;
+}
+.amountButton{
+    padding: 5px 0 5px 0;
+}
+.amountInput{
+    width: 35px;
+    height: 30px;
+    border: 1px solid grey;
+}
+.minus, .plus{
+    width: 25px;
+    height: 30px;
+    border: 1px solid grey;
+    background-color: grey;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+.minus{
+    border-radius: 2px 0 0 2px;
+}
+.plus{
+    border-radius: 0 2px 2px 0;
+}
+.amountInput, .minus, .plus{
+    vertical-align:middle;
+    box-sizing:border-box;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* Removes leftover margin */
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}

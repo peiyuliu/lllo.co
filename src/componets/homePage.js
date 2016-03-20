@@ -1,9 +1,10 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import { Link, IndexLink } from 'react-router'
 
 import { AboutUsLinkBar } from '../../src/componets/aboutUsPage.js'
 import { SearchPage } from '../../src/componets/searchPage.js'
 import { BasketPage } from '../../src/componets/basketPage.js'
+import AdList from '../../src/containers/ad-list'
 
 export class TitleBar extends Component {
     render() {
@@ -12,7 +13,7 @@ export class TitleBar extends Component {
                 <div className="col-xs-5">
                     <LllocoButton/>
                 </div>
-                <div className="col-xs-4 col-sm-3 col-md-2 col-lg-2 pull-right">
+                <div className="col-xs-4 col-sm-3 col-md-3 col-lg-2 pull-right">
                     <BasketButton/>
                     <AccountButton/>
                 </div>
@@ -40,32 +41,16 @@ export class BasketButton extends Component {
         if (this.state.empty === true) {
             return (
                 <Link to="/basketPage" className="bButton">
-                    <BasketButtonA/>
+                    <img src="../../img/basketEmpty.svg" />
                 </Link>
             )
         } else {
             return (
                 <Link to="/basketPage" className="bButton">
-                    <BasketButtonF/>
+                    <img src="../../img/basket.svg"/>
                 </Link>
             )
         }
-    }
-}
-
-export class BasketButtonA extends Component {
-    render() {
-        return (
-            <img src="../../img/basketEmpty.svg" />
-            )
-    }
-}
-
-export class BasketButtonF extends Component {
-    render() {
-        return (
-            <img src="../../img/basket.svg"/>
-        )
     }
 }
 
@@ -77,13 +62,13 @@ export class AccountButton extends Component {
     render() {
         if (this.state.logIn === true) {
             return (
-                <Link to="/accountLogInPage" className="aButton">
+                <Link to="/accountLogInPage">
                     <img src="../../img/accountLogIn.svg"/>
                 </Link>
             )
         } else {
             return (
-                <Link to="/accountPage/accountInfPage" className="aButton">
+                <Link to="/accountPage/accountInfPage">
                     <img src="../../img/accountIcon.svg"/>
                 </Link>
             )
@@ -95,11 +80,12 @@ export class FrontPage extends Component {
     render() {
         return (
             <div className="row">
-                <div className="col-xs-12 searchTitle">
+                <div className="col-xs-12 frontPage">
                     <Link to="searchPage" className="text-center center-block">
                         <div className="textHelpBuy">在地人幫你買</div>
                         <img id="searchButton" src="img/searchButton.svg"/>
                     </Link>
+                    <Link to="adPage">Advertisement Page</Link>
                 </div>
             </div>
         )

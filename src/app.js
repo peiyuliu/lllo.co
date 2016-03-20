@@ -12,8 +12,14 @@ import { AboutUsLinkBar, AboutUsPage } from '../src/componets/aboutUsPage.js'
 import { BasketPage, EmptyCartPage, CartPage, WishListsPage } from '../src/componets/basketPage.js'
 import { AccountLogInPage, AccountKeyInPage } from '../src/componets/accountLogInPage.js'
 import { AccountPage, AccountInfPage, OrderInfPage } from '../src/componets/accountPage.js'
+import { ProductPage } from '../src/componets/productPage.js'
+import { AdPage } from '../src/componets/advertisementPage'
 
-export class App extends Component {
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import reducers from './reducers';
+
+export class Web extends Component {
     render () {
         return (
             <div className="row app">
@@ -21,7 +27,9 @@ export class App extends Component {
                     <TitleBar />
                 </div>
                 <div className="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+                    <div className="row page"><div className="col-xs-12">
                     {this.props.children}
+                        </div></div>
                 </div>
                 <div className="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
                     <AboutUsLinkBar />
@@ -96,25 +104,37 @@ export class App extends Component {
 //    {subtitle: "Work Experience", text: "PEGA"},
 //];
 
+export class App extends Component {
+    render(){
+        return(
+            <Router history={browserHistory}>
+                <Route path="/" component={Web}>
+                    <IndexRoute component={FrontPage} />
+                    <Route path="/adPage" component={AdPage} />
+                    <Route path="/aboutUsPage" component={AboutUsPage} />
+                    <Route path="/searchPage" component={SearchPage} />
+                    <Route path="/basketPage" component={BasketPage} >
+                        <Route path="/basketPage/cartPage" component={CartPage} />
+                        <Route path="/basketPage/emptyCartPage" component={EmptyCartPage} />
+                    </Route>
+                    <Route path="/wishListsPage" component={WishListsPage} />
+                    <Route path="/accountLogInPage" component={AccountLogInPage} />
+                    <Route path="/accountKeyInPage" component={AccountKeyInPage} />
+                    <Route path="/accountPage" component={AccountPage} >
+                        <Route path="/accountPage/accountInfPage" component={AccountInfPage} />
+                        <Route path="/accountPage/orderInfPage" component={OrderInfPage} />
+                    </Route>
+                    <Route path="/productPage" component={ProductPage} />
+                </Route>
+            </Router>
+        )
+    }
+};
 
+const createStoreWithMiddleware = applyMiddleware()(createStore);
 
-ReactDOM.render((
-    <Router history={browserHistory}>
-        <Route path="/" component={App}>
-            <IndexRoute component={FrontPage} />
-            <Route path="/aboutUsPage" component={AboutUsPage} />
-            <Route path="/searchPage" component={SearchPage} />
-            <Route path="/basketPage" component={BasketPage} >
-                <Route path="/basketPage/cartPage" component={CartPage} />
-                <Route path="/basketPage/emptyCartPage" component={EmptyCartPage} />
-            </Route>
-            <Route path="/wishListsPage" component={WishListsPage} />
-            <Route path="/accountLogInPage" component={AccountLogInPage} />
-            <Route path="/accountKeyInPage" component={AccountKeyInPage} />
-            <Route path="/accountPage" component={AccountPage} >
-                <Route path="/accountPage/accountInfPage" component={AccountInfPage} />
-                <Route path="/accountPage/orderInfPage" component={OrderInfPage} />
-            </Route>
-        </Route>
-    </Router>
-), document.getElementById('content'))
+ReactDOM.render(
+    <Provider store={createStoreWithMiddleware(reducers)}>
+        <App />
+    </Provider>
+    , document.getElementById('content'));
