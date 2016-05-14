@@ -80,21 +80,23 @@
 	
 	var _aboutUsPage = __webpack_require__(219);
 	
-	var _basketPage = __webpack_require__(222);
+	var _cartPage = __webpack_require__(244);
 	
-	var _accountLogInPage = __webpack_require__(244);
+	var _wishListPage = __webpack_require__(247);
 	
-	var _accountPage = __webpack_require__(245);
+	var _accountLogInPage = __webpack_require__(249);
+	
+	var _accountPage = __webpack_require__(250);
 	
 	var _productPage = __webpack_require__(221);
 	
-	var _advertisementPage = __webpack_require__(246);
+	var _advertisementPage = __webpack_require__(251);
 	
-	var _reactRedux = __webpack_require__(224);
+	var _reactRedux = __webpack_require__(223);
 	
-	var _redux = __webpack_require__(230);
+	var _redux = __webpack_require__(229);
 	
-	var _reducers = __webpack_require__(247);
+	var _reducers = __webpack_require__(252);
 	
 	var _reducers2 = _interopRequireDefault(_reducers);
 	
@@ -151,71 +153,6 @@
 	    return Web;
 	})(_react.Component);
 	
-	//const Test = React.createClass({
-	//    render: function() {
-	//        return(
-	//            <div className="row">
-	//                <div className="col-xs-12">
-	//                    <textarea name="description" value="This is a description." />
-	//                </div>
-	//                <div className="col-xs-12">
-	//                    <select value="B" className="center-block">
-	//                        <option value="A">Apple</option>
-	//                        <option value="B">Banana</option>
-	//                        <option value="C">Cranberry</option>
-	//                    </select>
-	//                </div>
-	//            </div>
-	//        )
-	//    }
-	//});
-	//
-	//const Information = React.createClass({
-	//    render: function() {
-	//        var Mapfunction =  this.props.data.map(function(d){
-	//            return (
-	//                <InformationList subtitle={d.subtitle} text={d.text} />
-	//            )
-	//        });
-	//        return (
-	//            <div className="row">
-	//                {Mapfunction}
-	//            </div>
-	//        )
-	//    }
-	//});
-	//
-	//const InformationList = React.createClass({
-	//    render: function() {
-	//        return(
-	//            <div className="col-xs-6">
-	//                <h4>{this.props.subtitle}</h4>
-	//                <h5>{this.props.text}</h5>
-	//            </div>
-	//        )
-	//    }
-	//});
-	//
-	//class Abc extends Component {
-	//    constructor (props){
-	//    super(props);
-	//    this.state = { term: ''}
-	//    }
-	//    render () {
-	//    return(
-	//        <div className="col-xs-6">
-	//            <h4>{this.props.subtitle}</h4>
-	//            <h5>{this.props.text}</h5>
-	//        </div>
-	//    )
-	//}
-	//};
-	//
-	//const data = [
-	//    {subtitle: "Summary", text: "Hello"},
-	//    {subtitle: "Work Experience", text: "PEGA"},
-	//];
-	
 	var App = exports.App = (function (_Component2) {
 	    _inherits(App, _Component2);
 	
@@ -236,15 +173,11 @@
 	                    { path: "/", component: Web },
 	                    _react2.default.createElement(_reactRouter.IndexRoute, { component: _homePage.FrontPage }),
 	                    _react2.default.createElement(_reactRouter.Route, { path: "/adPage", component: _advertisementPage.AdPage }),
+	                    _react2.default.createElement(_reactRouter.Route, { path: "/productPage", component: _productPage.ProductPage }),
 	                    _react2.default.createElement(_reactRouter.Route, { path: "/aboutUsPage", component: _aboutUsPage.AboutUsPage }),
 	                    _react2.default.createElement(_reactRouter.Route, { path: "/searchPage", component: _searchPage.SearchPage }),
-	                    _react2.default.createElement(
-	                        _reactRouter.Route,
-	                        { path: "/basketPage", component: _basketPage.BasketPage },
-	                        _react2.default.createElement(_reactRouter.Route, { path: "/basketPage/cartPage", component: _basketPage.CartPage }),
-	                        _react2.default.createElement(_reactRouter.Route, { path: "/basketPage/emptyCartPage", component: _basketPage.EmptyCartPage })
-	                    ),
-	                    _react2.default.createElement(_reactRouter.Route, { path: "/wishListsPage", component: _basketPage.WishListsPage }),
+	                    _react2.default.createElement(_reactRouter.Route, { path: "/cartPage", component: _cartPage.CartPage }),
+	                    _react2.default.createElement(_reactRouter.Route, { path: "/wishListPage", component: _wishListPage.WishListPage }),
 	                    _react2.default.createElement(_reactRouter.Route, { path: "/accountLogInPage", component: _accountLogInPage.AccountLogInPage }),
 	                    _react2.default.createElement(_reactRouter.Route, { path: "/accountKeyInPage", component: _accountLogInPage.AccountKeyInPage }),
 	                    _react2.default.createElement(
@@ -252,8 +185,7 @@
 	                        { path: "/accountPage", component: _accountPage.AccountPage },
 	                        _react2.default.createElement(_reactRouter.Route, { path: "/accountPage/accountInfPage", component: _accountPage.AccountInfPage }),
 	                        _react2.default.createElement(_reactRouter.Route, { path: "/accountPage/orderInfPage", component: _accountPage.OrderInfPage })
-	                    ),
-	                    _react2.default.createElement(_reactRouter.Route, { path: "/productPage", component: _productPage.ProductPage })
+	                    )
 	                )
 	            );
 	        }
@@ -658,7 +590,7 @@
 	
 	
 	// module
-	exports.push([module.id, "/* homePage */\n\n.titleBar{\n    padding: 15px 0 10px 10px;\n    border-bottom: 1px solid #E5E5E5;\n}\n.llloco{\n    height: 23px;\n}\n.bButton{\n    padding: 0 25px 0 5px;\n}\n.frontPage{\n    padding-top: 150px ;\n    padding-bottom: 200px;\n}\n.textHelpBuy{\n    color: #00BCD4;\n    font-size: 18px;\n    padding: 0 0 10px 0;\n}\n#searchButton{\n    height: 70px;\n}\n\n/* SearchPage */\n\n.searchPage{\n    padding-top: 100px;\n    padding-bottom: 150px;\n}\n.searchBar{\n    padding: 15px 0 0 0;\n}\n\ntextarea:focus, input:focus{\n    outline: none;\n}\n\n.inputBarL {\n    font-size: 19px;\n    font-family: \"Andale Mono\", Monaco, serif;\n    color: #9B9B9B;\n    padding-left: 10px;\n    border-radius: 5px;\n    border: 1px solid #00BCD4;\n    height: 40px;\n    width: 200px;\n}\n#searchIconBig{\n    height: 60px;\n    width: 60px;\n    padding: 10px;\n    background-color: #00BCD4;\n    border-radius: 10px;\n }\n\n\n\n/* aboutPage*/\n\n.aboutUsLink{\n    border-top: 1px solid #E5E5E5;\n    padding: 5px 0 20px 0;\n\n}\n.aboutUsText{\n    color: grey;\n}\n.aboutUsAll{\n    padding-bottom: 10px;\n}\n.aboutUsBox{\n    padding-bottom: 5px;\n}\n/* basketPage */\n\n.pageTitle{\n    padding: 10px 0 10px 0;\n}\n.page{\n    padding: 0 20px 0 20px;\n}\n.buttonY{\n    color: white;\n    background-color: #00BCD4;\n    font-size: 16px;\n    padding: 7px 0 7px 0;\n    border-bottom: 2px solid #00BCD4;\n}\n.buttonN{\n    color: #00BCD4;\n    background-color: white;\n    font-size: 16px;\n    padding: 7px 0 7px 0;\n    border-bottom: 2px solid #00BCD4;\n}\n\n/*ProductPage*/\n.productBox{\n    border: 1px solid black;\n    padding: 0 0 0 0 ;\n}\n.productItem{\n    padding: 0 5px 0 5px;\n}\n.amountButton{\n    padding: 5px 0 5px 0;\n}\n.amountInput{\n    width: 35px;\n    height: 30px;\n    border: 1px solid grey;\n}\n.minus, .plus{\n    width: 25px;\n    height: 30px;\n    border: 1px solid grey;\n    background-color: grey;\n    color: white;\n    font-size: 15px;\n    outline: none;\n}\n.minus{\n    border-radius: 2px 0 0 2px;\n}\n.plus{\n    border-radius: 0 2px 2px 0;\n}\n.amountInput, .minus, .plus{\n    vertical-align:middle;\n    box-sizing:border-box;\n}\ninput[type=number]::-webkit-inner-spin-button,\ninput[type=number]::-webkit-outer-spin-button {\n    -webkit-appearance: none;\n    margin: 0; /* Removes leftover margin */\n}\ninput[type=number] {\n    -moz-appearance: textfield;\n}\n", ""]);
+	exports.push([module.id, "/* homePage */\n\n.titleBar{\n    padding: 15px 0 10px 10px;\n    border-bottom: 1px solid #E5E5E5;\n}\n.llloco{\n    height: 23px;\n}\n.bButton{\n    padding: 0 25px 0 5px;\n}\n.frontPage{\n    padding-top: 150px ;\n    padding-bottom: 200px;\n}\n.textHelpBuy{\n    color: #00BCD4;\n    font-size: 18px;\n    padding: 0 0 10px 0;\n}\n#searchButton{\n    height: 70px;\n}\n\n/* SearchPage */\n\n.searchPage{\n    padding-top: 100px;\n    padding-bottom: 150px;\n}\n.searchBar{\n    padding: 15px 0 0 0;\n}\n\ntextarea:focus, input:focus{\n    outline: none;\n}\n\n.inputBarL {\n    font-size: 19px;\n    font-family: \"Andale Mono\", Monaco, serif;\n    color: #9B9B9B;\n    padding-left: 10px;\n    border-radius: 5px;\n    border: 1px solid #00BCD4;\n    height: 40px;\n    width: 200px;\n}\n#searchIconBig{\n    height: 60px;\n    width: 60px;\n    padding: 10px;\n    background-color: #00BCD4;\n    border-radius: 10px;\n }\n\n\n\n/* aboutPage*/\n\n.aboutUsLink{\n    border-top: 1px solid #E5E5E5;\n    padding: 5px 0 20px 0;\n\n}\n.aboutUsText{\n    color: grey;\n}\n.aboutUsAll{\n    padding-bottom: 10px;\n}\n.aboutUsBox{\n    padding-bottom: 5px;\n}\n/* basketPage */\n\n.pageTitle{\n    padding: 10px 0 10px 0;\n}\n.page{\n    padding: 0 20px 20px 20px;\n}\n.titleOn{\n    color: white;\n    background-color: #00BCD4;\n    font-size: 16px;\n    padding: 7px 0 7px 0;\n    border-bottom: 2px solid #00BCD4;\n}\n.titleOff{\n    color: #00BCD4;\n    background-color: white;\n    font-size: 16px;\n    padding: 7px 0 7px 0;\n    border-bottom: 2px solid #00BCD4;\n}\n\n/*cartPage*/\n\n.productBox{\n    border: 1px solid black;\n    padding: 0 0 0 0 ;\n}\n.productItem{\n    padding: 0 5px 0 5px;\n}\n.amountButton{\n    padding: 5px 0 5px 0;\n}\n.amountInput{\n    width: 35px;\n    height: 30px;\n    border: 1px solid grey;\n}\n.minus, .plus{\n    width: 25px;\n    height: 30px;\n    border: 1px solid grey;\n    background-color: grey;\n    color: white;\n    font-size: 15px;\n    outline: none;\n}\n.minus{\n    border-radius: 2px 0 0 2px;\n}\n.plus{\n    border-radius: 0 2px 2px 0;\n}\n.amountInput, .minus, .plus{\n    vertical-align:middle;\n    box-sizing:border-box;\n}\ninput[type=number]::-webkit-inner-spin-button,\ninput[type=number]::-webkit-outer-spin-button {\n    -webkit-appearance: none;\n    margin: 0; /* Removes leftover margin */\n}\ninput[type=number] {\n    -moz-appearance: textfield;\n}\n\n\n/*ad-list*/\n\n.adList{\n    padding: 7px 7px 7px 7px;\n}\n\n\n/*cartPage*/\n\n.cartList{\n    padding: 15px 0 15px 0;\n}\n\n.cartPriceBox{\n    padding: 15px 0 15px 0;\n    border: 1px solid #E5E5E5;\n}\n\n.generalBtn{\n    padding: 15px 0 15px 0;\n}\n\n.cartBtn{\n    border: none;\n    background-color: #00BCD4;\n    color: white;\n    font-size: 15px;\n    border-radius: 3px 3px 3px 3px;\n    padding: 7px 13px 7px 13px;\n}\n\n.totalPrice{\n    border-top: 1px dashed #E5E5E5;\n    padding: 5px 0 0 0;\n}\n\n.allPrice{\n    padding: 0 0 5px 0;\n}", ""]);
 	
 	// exports
 
@@ -24608,9 +24540,9 @@
 	
 	var _searchPage = __webpack_require__(220);
 	
-	var _basketPage = __webpack_require__(222);
+	var _cartPage = __webpack_require__(244);
 	
-	var _adList = __webpack_require__(223);
+	var _adList = __webpack_require__(246);
 	
 	var _adList2 = _interopRequireDefault(_adList);
 	
@@ -24696,13 +24628,13 @@
 	            if (this.state.empty === true) {
 	                return _react2.default.createElement(
 	                    _reactRouter.Link,
-	                    { to: '/basketPage', className: 'bButton' },
+	                    { to: '/cartPage', className: 'bButton' },
 	                    _react2.default.createElement('img', { src: '../../img/basketEmpty.svg' })
 	                );
 	            } else {
 	                return _react2.default.createElement(
 	                    _reactRouter.Link,
-	                    { to: '/basketPage', className: 'bButton' },
+	                    { to: '/cartPage', className: 'bButton' },
 	                    _react2.default.createElement('img', { src: '../../img/basket.svg' })
 	                );
 	            }
@@ -25108,11 +25040,17 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.AmountButton = exports.ProductItem = exports.ProductPage = undefined;
+	exports.ProductPage = undefined;
 	
 	var _react = __webpack_require__(13);
 	
 	var _reactRouter = __webpack_require__(171);
+	
+	var _adDetail = __webpack_require__(222);
+	
+	var _adDetail2 = _interopRequireDefault(_adDetail);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
@@ -25132,496 +25070,16 @@
 	    _createClass(ProductPage, [{
 	        key: 'render',
 	        value: function render() {
-	            return React.createElement(
-	                'div',
-	                { className: 'row' },
-	                'I\'m Product!'
-	            );
+	            return React.createElement(_adDetail2.default, null);
 	        }
 	    }]);
 	
 	    return ProductPage;
 	})(_react.Component);
-	
-	var ProductItem = exports.ProductItem = (function (_Component2) {
-	    _inherits(ProductItem, _Component2);
-	
-	    function ProductItem() {
-	        _classCallCheck(this, ProductItem);
-	
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(ProductItem).apply(this, arguments));
-	    }
-	
-	    _createClass(ProductItem, [{
-	        key: 'render',
-	        value: function render() {
-	            return React.createElement(
-	                'div',
-	                { className: 'row' },
-	                React.createElement(
-	                    'div',
-	                    { className: 'col-xs-5' },
-	                    React.createElement('img', { src: this.props.product.img, className: 'img-responsive' })
-	                ),
-	                React.createElement(
-	                    'div',
-	                    { className: 'col-xs-5' },
-	                    React.createElement(
-	                        'div',
-	                        { className: 'row' },
-	                        React.createElement(
-	                            'div',
-	                            { className: 'col-xs-12 productTitle' },
-	                            this.props.product.title
-	                        ),
-	                        React.createElement(
-	                            'div',
-	                            { className: 'col-xs-12 productInfo' },
-	                            this.props.product.info
-	                        ),
-	                        React.createElement(
-	                            'div',
-	                            { className: 'col-xs-12' },
-	                            React.createElement(AmountButton, null)
-	                        ),
-	                        React.createElement(
-	                            'div',
-	                            { className: 'col-xs-6 productPrice pull-right' },
-	                            'NT$',
-	                            this.props.product.price
-	                        ),
-	                        React.createElement(
-	                            'div',
-	                            { className: 'col-xs-12 cartWishButton' },
-	                            React.createElement(
-	                                'h6',
-	                                null,
-	                                '＋移至收藏清單'
-	                            )
-	                        )
-	                    )
-	                ),
-	                React.createElement(
-	                    'div',
-	                    { className: 'col-xs-2' },
-	                    React.createElement('img', { src: '../../img/trash.svg' })
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return ProductItem;
-	})(_react.Component);
-	
-	var AmountButton = exports.AmountButton = (function (_Component3) {
-	    _inherits(AmountButton, _Component3);
-	
-	    function AmountButton() {
-	        _classCallCheck(this, AmountButton);
-	
-	        var _this3 = _possibleConstructorReturn(this, Object.getPrototypeOf(AmountButton).call(this));
-	
-	        _this3.state = { productAmount: 1 };
-	        _this3.minusOnClick = _this3.minusOnClick.bind(_this3);
-	        _this3.handleChange = _this3.handleChange.bind(_this3);
-	        _this3.plusOnClick = _this3.plusOnClick.bind(_this3);
-	        return _this3;
-	    }
-	
-	    _createClass(AmountButton, [{
-	        key: 'handleChange',
-	        value: function handleChange(event) {
-	            this.setState({ productAmount: event.target.value });
-	        }
-	    }, {
-	        key: 'minusOnClick',
-	        value: function minusOnClick() {
-	            var originalAmount = this.state.productAmount;
-	            this.setState({ productAmount: originalAmount - 1 });
-	        }
-	    }, {
-	        key: 'plusOnClick',
-	        value: function plusOnClick() {
-	            var originalAmount = this.state.productAmount;
-	            this.setState({ productAmount: originalAmount + 1 });
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return React.createElement(
-	                'div',
-	                { className: 'amountButton' },
-	                React.createElement(
-	                    'button',
-	                    { className: 'text-center minus', onClick: this.minusOnClick },
-	                    '-'
-	                ),
-	                React.createElement('input', {
-	                    type: 'number',
-	                    className: 'text-center amountInput',
-	                    value: this.state.productAmount,
-	                    onChange: this.handleChange }),
-	                React.createElement(
-	                    'button',
-	                    { className: 'text-center plus', onClick: this.plusOnClick },
-	                    '+'
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return AmountButton;
-	})(_react.Component);
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(13)))
 
 /***/ },
 /* 222 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.CartPage = exports.EmptyCartPage = exports.CartButtonN = exports.CartButtonY = exports.WishListsPage = exports.BasketPage = undefined;
-	
-	var _react = __webpack_require__(13);
-	
-	var _reactRouter = __webpack_require__(171);
-	
-	var _homePage = __webpack_require__(218);
-	
-	var _productPage = __webpack_require__(221);
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var BasketPage = exports.BasketPage = (function (_Component) {
-	    _inherits(BasketPage, _Component);
-	
-	    function BasketPage() {
-	        _classCallCheck(this, BasketPage);
-	
-	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(BasketPage).call(this));
-	
-	        _this.state = { empty: true };
-	        return _this;
-	    }
-	
-	    _createClass(BasketPage, [{
-	        key: 'render',
-	        value: function render() {
-	            if (this.state.empty === true) {
-	                return React.createElement(
-	                    'div',
-	                    { className: 'row' },
-	                    React.createElement(
-	                        'div',
-	                        { className: 'col-xs-12' },
-	                        React.createElement(
-	                            'div',
-	                            { className: 'row pageTitle' },
-	                            React.createElement(
-	                                'div',
-	                                { className: 'col-xs-6' },
-	                                React.createElement(CartButtonY, null)
-	                            ),
-	                            React.createElement(
-	                                'div',
-	                                { className: 'col-xs-6' },
-	                                React.createElement(WishListsButtonN, null)
-	                            )
-	                        )
-	                    ),
-	                    React.createElement(
-	                        'div',
-	                        { className: 'col-xs-12' },
-	                        React.createElement(EmptyCartPage, null)
-	                    )
-	                );
-	            } else {
-	                return React.createElement(
-	                    'div',
-	                    { className: 'row' },
-	                    React.createElement(
-	                        'div',
-	                        { className: 'col-xs-12' },
-	                        React.createElement(
-	                            'div',
-	                            { className: 'row pageTitle' },
-	                            React.createElement(
-	                                'div',
-	                                { className: 'col-xs-6' },
-	                                React.createElement(CartButtonY, null)
-	                            ),
-	                            React.createElement(
-	                                'div',
-	                                { className: 'col-xs-6' },
-	                                React.createElement(WishListsButtonN, null)
-	                            )
-	                        )
-	                    ),
-	                    React.createElement(
-	                        'div',
-	                        { className: 'col-xs-12' },
-	                        React.createElement(CartPage, null)
-	                    )
-	                );
-	            }
-	        }
-	    }]);
-	
-	    return BasketPage;
-	})(_react.Component);
-	
-	var WishListsPage = exports.WishListsPage = (function (_Component2) {
-	    _inherits(WishListsPage, _Component2);
-	
-	    function WishListsPage() {
-	        _classCallCheck(this, WishListsPage);
-	
-	        var _this2 = _possibleConstructorReturn(this, Object.getPrototypeOf(WishListsPage).call(this));
-	
-	        _this2.productList = [{
-	            id: 0,
-	            img: '../../img/shoe.jpg',
-	            title: 'shoes',
-	            info: 'red',
-	            price: '100'
-	        }, {
-	            id: 1,
-	            img: '../../img/shoe.jpg',
-	            title: 'pen',
-	            info: 'green',
-	            price: '200'
-	        }];
-	        return _this2;
-	    }
-	
-	    _createClass(WishListsPage, [{
-	        key: 'render',
-	        value: function render() {
-	            return React.createElement(
-	                'div',
-	                { className: 'row' },
-	                React.createElement(
-	                    'div',
-	                    { className: 'col-xs-12' },
-	                    React.createElement(
-	                        'div',
-	                        { className: 'row pageTitle' },
-	                        React.createElement(
-	                            'div',
-	                            { className: 'col-xs-6' },
-	                            React.createElement(CartButtonN, null)
-	                        ),
-	                        React.createElement(
-	                            'div',
-	                            { className: 'col-xs-6' },
-	                            React.createElement(WishListsButtonY, null)
-	                        )
-	                    )
-	                ),
-	                this.productList.map(function (productInput) {
-	                    return React.createElement(
-	                        'div',
-	                        { className: 'col-xs-12 col-sm-6', key: productInput.id },
-	                        React.createElement(_productPage.ProductItem, { product: productInput })
-	                    );
-	                })
-	            );
-	        }
-	    }]);
-	
-	    return WishListsPage;
-	})(_react.Component);
-	
-	var CartButtonY = exports.CartButtonY = (function (_Component3) {
-	    _inherits(CartButtonY, _Component3);
-	
-	    function CartButtonY() {
-	        _classCallCheck(this, CartButtonY);
-	
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(CartButtonY).apply(this, arguments));
-	    }
-	
-	    _createClass(CartButtonY, [{
-	        key: 'render',
-	        value: function render() {
-	            return React.createElement(
-	                _reactRouter.Link,
-	                { to: '/basketPage' },
-	                React.createElement(
-	                    'div',
-	                    { className: 'row buttonY' },
-	                    React.createElement(
-	                        'div',
-	                        { className: 'col-xs-12 text-center' },
-	                        '購物車'
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return CartButtonY;
-	})(_react.Component);
-	
-	var CartButtonN = exports.CartButtonN = (function (_Component4) {
-	    _inherits(CartButtonN, _Component4);
-	
-	    function CartButtonN() {
-	        _classCallCheck(this, CartButtonN);
-	
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(CartButtonN).apply(this, arguments));
-	    }
-	
-	    _createClass(CartButtonN, [{
-	        key: 'render',
-	        value: function render() {
-	            return React.createElement(
-	                _reactRouter.Link,
-	                { to: '/basketPage' },
-	                React.createElement(
-	                    'div',
-	                    { className: 'row buttonN' },
-	                    React.createElement(
-	                        'div',
-	                        { className: 'col-xs-12 text-center' },
-	                        '購物車'
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return CartButtonN;
-	})(_react.Component);
-	
-	var EmptyCartPage = exports.EmptyCartPage = (function (_Component5) {
-	    _inherits(EmptyCartPage, _Component5);
-	
-	    function EmptyCartPage() {
-	        _classCallCheck(this, EmptyCartPage);
-	
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(EmptyCartPage).apply(this, arguments));
-	    }
-	
-	    _createClass(EmptyCartPage, [{
-	        key: 'render',
-	        value: function render() {
-	            return React.createElement(
-	                'div',
-	                { className: 'row' },
-	                React.createElement(
-	                    'div',
-	                    { className: 'col-xs-12' },
-	                    '購物車 空空滴'
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return EmptyCartPage;
-	})(_react.Component);
-	
-	var CartPage = exports.CartPage = (function (_Component6) {
-	    _inherits(CartPage, _Component6);
-	
-	    function CartPage() {
-	        _classCallCheck(this, CartPage);
-	
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(CartPage).apply(this, arguments));
-	    }
-	
-	    _createClass(CartPage, [{
-	        key: 'render',
-	        value: function render() {
-	            return React.createElement(
-	                'div',
-	                { className: 'row' },
-	                React.createElement(
-	                    'div',
-	                    { className: 'col-xs-12' },
-	                    this.props.children
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return CartPage;
-	})(_react.Component);
-	
-	var WishListsButtonY = (function (_Component7) {
-	    _inherits(WishListsButtonY, _Component7);
-	
-	    function WishListsButtonY() {
-	        _classCallCheck(this, WishListsButtonY);
-	
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(WishListsButtonY).apply(this, arguments));
-	    }
-	
-	    _createClass(WishListsButtonY, [{
-	        key: 'render',
-	        value: function render() {
-	            return React.createElement(
-	                _reactRouter.Link,
-	                { to: '/wishListsPage' },
-	                React.createElement(
-	                    'div',
-	                    { className: 'row buttonY' },
-	                    React.createElement(
-	                        'div',
-	                        { className: 'col-xs-12 text-center' },
-	                        '收藏清單'
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return WishListsButtonY;
-	})(_react.Component);
-	
-	var WishListsButtonN = (function (_Component8) {
-	    _inherits(WishListsButtonN, _Component8);
-	
-	    function WishListsButtonN() {
-	        _classCallCheck(this, WishListsButtonN);
-	
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(WishListsButtonN).apply(this, arguments));
-	    }
-	
-	    _createClass(WishListsButtonN, [{
-	        key: 'render',
-	        value: function render() {
-	            return React.createElement(
-	                _reactRouter.Link,
-	                { to: '/wishListsPage' },
-	                React.createElement(
-	                    'div',
-	                    { className: 'row buttonN' },
-	                    React.createElement(
-	                        'div',
-	                        { className: 'col-xs-12 text-center' },
-	                        '收藏清單'
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return WishListsButtonN;
-	})(_react.Component);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(13)))
-
-/***/ },
-/* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25636,7 +25094,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactRedux = __webpack_require__(224);
+	var _reactRedux = __webpack_require__(223);
+	
+	var _redux = __webpack_require__(229);
+	
+	var _index = __webpack_require__(243);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -25646,50 +25108,88 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var AdList = (function (_Component) {
-	    _inherits(AdList, _Component);
+	var AdDetail = (function (_Component) {
+	    _inherits(AdDetail, _Component);
 	
-	    function AdList() {
-	        _classCallCheck(this, AdList);
+	    function AdDetail() {
+	        _classCallCheck(this, AdDetail);
 	
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(AdList).apply(this, arguments));
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(AdDetail).apply(this, arguments));
 	    }
 	
-	    _createClass(AdList, [{
-	        key: 'renderList',
-	        value: function renderList() {
-	            return this.props.ads.map(function (ad) {
-	                return _react2.default.createElement(
-	                    'li',
-	                    { key: ad.title },
-	                    ad.title
-	                );
-	            });
-	        }
-	    }, {
+	    _createClass(AdDetail, [{
 	        key: 'render',
 	        value: function render() {
+	            var _props = this.props;
+	            var activeAd = _props.activeAd;
+	            var addToCart = _props.addToCart;
+	            var addToWishList = _props.addToWishList;
+	
+	            if (!activeAd) {
+	                return _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    '123'
+	                );
+	            }
 	            return _react2.default.createElement(
-	                'ul',
-	                { className: 'col-sm-4' },
-	                this.renderList()
+	                'div',
+	                { className: 'col-sm-8' },
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement('img', { src: activeAd.img, className: 'img-responsive' })
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    activeAd.title
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    activeAd.color
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    activeAd.price
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { type: 'button', onClick: function onClick() {
+	                            return addToCart(activeAd);
+	                        } },
+	                    '＋購物車'
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { type: 'button', onClick: function onClick() {
+	                            return addToWishList(activeAd);
+	                        } },
+	                    '＋收藏清單'
+	                )
 	            );
 	        }
 	    }]);
 	
-	    return AdList;
+	    return AdDetail;
 	})(_react.Component);
 	
 	function mapStateToProps(state) {
 	    return {
-	        ads: state.ads
+	        activeAd: state.activeAd
 	    };
 	}
 	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps)(AdList);
+	function mapDispatchToProps(dispatch) {
+	    return (0, _redux.bindActionCreators)({ addToCart: _index.addToCart, addToWishList: _index.addToWishList }, dispatch);
+	}
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(AdDetail);
 
 /***/ },
-/* 224 */
+/* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25697,11 +25197,11 @@
 	exports.__esModule = true;
 	exports.connect = exports.Provider = undefined;
 	
-	var _Provider = __webpack_require__(225);
+	var _Provider = __webpack_require__(224);
 	
 	var _Provider2 = _interopRequireDefault(_Provider);
 	
-	var _connect = __webpack_require__(227);
+	var _connect = __webpack_require__(226);
 	
 	var _connect2 = _interopRequireDefault(_connect);
 	
@@ -25711,7 +25211,7 @@
 	exports.connect = _connect2["default"];
 
 /***/ },
-/* 225 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -25721,7 +25221,7 @@
 	
 	var _react = __webpack_require__(13);
 	
-	var _storeShape = __webpack_require__(226);
+	var _storeShape = __webpack_require__(225);
 	
 	var _storeShape2 = _interopRequireDefault(_storeShape);
 	
@@ -25795,7 +25295,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)))
 
 /***/ },
-/* 226 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25811,7 +25311,7 @@
 	});
 
 /***/ },
-/* 227 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -25823,23 +25323,23 @@
 	
 	var _react = __webpack_require__(13);
 	
-	var _storeShape = __webpack_require__(226);
+	var _storeShape = __webpack_require__(225);
 	
 	var _storeShape2 = _interopRequireDefault(_storeShape);
 	
-	var _shallowEqual = __webpack_require__(228);
+	var _shallowEqual = __webpack_require__(227);
 	
 	var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 	
-	var _wrapActionCreators = __webpack_require__(229);
+	var _wrapActionCreators = __webpack_require__(228);
 	
 	var _wrapActionCreators2 = _interopRequireDefault(_wrapActionCreators);
 	
-	var _isPlainObject = __webpack_require__(240);
+	var _isPlainObject = __webpack_require__(239);
 	
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 	
-	var _hoistNonReactStatics = __webpack_require__(243);
+	var _hoistNonReactStatics = __webpack_require__(242);
 	
 	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 	
@@ -26139,7 +25639,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)))
 
 /***/ },
-/* 228 */
+/* 227 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -26170,7 +25670,7 @@
 	}
 
 /***/ },
-/* 229 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26178,7 +25678,7 @@
 	exports.__esModule = true;
 	exports["default"] = wrapActionCreators;
 	
-	var _redux = __webpack_require__(230);
+	var _redux = __webpack_require__(229);
 	
 	function wrapActionCreators(actionCreators) {
 	  return function (dispatch) {
@@ -26187,7 +25687,7 @@
 	}
 
 /***/ },
-/* 230 */
+/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -26195,27 +25695,27 @@
 	exports.__esModule = true;
 	exports.compose = exports.applyMiddleware = exports.bindActionCreators = exports.combineReducers = exports.createStore = undefined;
 	
-	var _createStore = __webpack_require__(231);
+	var _createStore = __webpack_require__(230);
 	
 	var _createStore2 = _interopRequireDefault(_createStore);
 	
-	var _combineReducers = __webpack_require__(235);
+	var _combineReducers = __webpack_require__(234);
 	
 	var _combineReducers2 = _interopRequireDefault(_combineReducers);
 	
-	var _bindActionCreators = __webpack_require__(237);
+	var _bindActionCreators = __webpack_require__(236);
 	
 	var _bindActionCreators2 = _interopRequireDefault(_bindActionCreators);
 	
-	var _applyMiddleware = __webpack_require__(238);
+	var _applyMiddleware = __webpack_require__(237);
 	
 	var _applyMiddleware2 = _interopRequireDefault(_applyMiddleware);
 	
-	var _compose = __webpack_require__(239);
+	var _compose = __webpack_require__(238);
 	
 	var _compose2 = _interopRequireDefault(_compose);
 	
-	var _warning = __webpack_require__(236);
+	var _warning = __webpack_require__(235);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -26239,7 +25739,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)))
 
 /***/ },
-/* 231 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26248,7 +25748,7 @@
 	exports.ActionTypes = undefined;
 	exports["default"] = createStore;
 	
-	var _isPlainObject = __webpack_require__(232);
+	var _isPlainObject = __webpack_require__(231);
 	
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 	
@@ -26460,11 +25960,11 @@
 	}
 
 /***/ },
-/* 232 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isHostObject = __webpack_require__(233),
-	    isObjectLike = __webpack_require__(234);
+	var isHostObject = __webpack_require__(232),
+	    isObjectLike = __webpack_require__(233);
 	
 	/** `Object#toString` result references. */
 	var objectTag = '[object Object]';
@@ -26532,7 +26032,7 @@
 
 
 /***/ },
-/* 233 */
+/* 232 */
 /***/ function(module, exports) {
 
 	/**
@@ -26558,7 +26058,7 @@
 
 
 /***/ },
-/* 234 */
+/* 233 */
 /***/ function(module, exports) {
 
 	/**
@@ -26592,7 +26092,7 @@
 
 
 /***/ },
-/* 235 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -26600,13 +26100,13 @@
 	exports.__esModule = true;
 	exports["default"] = combineReducers;
 	
-	var _createStore = __webpack_require__(231);
+	var _createStore = __webpack_require__(230);
 	
-	var _isPlainObject = __webpack_require__(232);
+	var _isPlainObject = __webpack_require__(231);
 	
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 	
-	var _warning = __webpack_require__(236);
+	var _warning = __webpack_require__(235);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -26725,7 +26225,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)))
 
 /***/ },
-/* 236 */
+/* 235 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -26754,7 +26254,7 @@
 	}
 
 /***/ },
-/* 237 */
+/* 236 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -26810,7 +26310,7 @@
 	}
 
 /***/ },
-/* 238 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26820,7 +26320,7 @@
 	exports.__esModule = true;
 	exports["default"] = applyMiddleware;
 	
-	var _compose = __webpack_require__(239);
+	var _compose = __webpack_require__(238);
 	
 	var _compose2 = _interopRequireDefault(_compose);
 	
@@ -26872,7 +26372,7 @@
 	}
 
 /***/ },
-/* 239 */
+/* 238 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -26906,11 +26406,11 @@
 	}
 
 /***/ },
-/* 240 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isHostObject = __webpack_require__(241),
-	    isObjectLike = __webpack_require__(242);
+	var isHostObject = __webpack_require__(240),
+	    isObjectLike = __webpack_require__(241);
 	
 	/** `Object#toString` result references. */
 	var objectTag = '[object Object]';
@@ -26978,7 +26478,7 @@
 
 
 /***/ },
-/* 241 */
+/* 240 */
 /***/ function(module, exports) {
 
 	/**
@@ -27004,7 +26504,7 @@
 
 
 /***/ },
-/* 242 */
+/* 241 */
 /***/ function(module, exports) {
 
 	/**
@@ -27038,7 +26538,7 @@
 
 
 /***/ },
-/* 243 */
+/* 242 */
 /***/ function(module, exports) {
 
 	/**
@@ -27084,7 +26584,924 @@
 
 
 /***/ },
+/* 243 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.selectAd = selectAd;
+	exports.addToCart = addToCart;
+	exports.removeFromCart = removeFromCart;
+	exports.addToWishList = addToWishList;
+	exports.removeFromWishList = removeFromWishList;
+	function selectAd(ad) {
+	    return {
+	        type: 'AD_SELECTED',
+	        payload: ad
+	    };
+	}
+	
+	function addToCart(ad) {
+	    return {
+	        type: 'ADD_TO_CART',
+	        payload: ad
+	    };
+	}
+	
+	function removeFromCart(ad) {
+	    return {
+	        type: 'REMOVE_FROM_CART',
+	        payload: ad
+	    };
+	}
+	
+	function addToWishList(ad) {
+	    return {
+	        type: 'ADD_TO_WISHLIST',
+	        payload: ad
+	    };
+	}
+	
+	function removeFromWishList(ad) {
+	    return {
+	        type: 'REMOVE_FROM_WISHLIST',
+	        payload: ad
+	    };
+	}
+
+/***/ },
 /* 244 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.CartPage = undefined;
+	
+	var _react = __webpack_require__(13);
+	
+	var _reactRouter = __webpack_require__(171);
+	
+	var _cartList = __webpack_require__(245);
+	
+	var _cartList2 = _interopRequireDefault(_cartList);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var CartPage = exports.CartPage = (function (_Component) {
+	    _inherits(CartPage, _Component);
+	
+	    function CartPage() {
+	        _classCallCheck(this, CartPage);
+	
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(CartPage).apply(this, arguments));
+	    }
+	
+	    _createClass(CartPage, [{
+	        key: 'render',
+	        value: function render() {
+	            return React.createElement(
+	                'div',
+	                { className: 'row' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'col-xs-12' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'row pageTitle' },
+	                        React.createElement(
+	                            'div',
+	                            { className: 'col-xs-6' },
+	                            React.createElement(CartTitleOn, null)
+	                        ),
+	                        React.createElement(
+	                            'div',
+	                            { className: 'col-xs-6' },
+	                            React.createElement(WishListTitleOff, null)
+	                        )
+	                    )
+	                ),
+	                React.createElement(
+	                    'div',
+	                    { className: 'col-xs-12 cartList' },
+	                    React.createElement(_cartList2.default, null)
+	                ),
+	                React.createElement(
+	                    'div',
+	                    { className: 'col-xs-12' },
+	                    React.createElement(CartPriceBox, null)
+	                ),
+	                React.createElement(
+	                    'div',
+	                    { className: 'col-xs-12 generalBtn' },
+	                    React.createElement(
+	                        'button',
+	                        { type: 'button', className: 'cartBtn pull-right' },
+	                        '結帳'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return CartPage;
+	})(_react.Component);
+	
+	var CartPriceBox = (function (_Component2) {
+	    _inherits(CartPriceBox, _Component2);
+	
+	    function CartPriceBox() {
+	        _classCallCheck(this, CartPriceBox);
+	
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(CartPriceBox).apply(this, arguments));
+	    }
+	
+	    _createClass(CartPriceBox, [{
+	        key: 'render',
+	        value: function render() {
+	            return React.createElement(
+	                'div',
+	                { className: 'row cartPriceBox' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'col-xs-12' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'row allPrice' },
+	                        React.createElement(
+	                            'div',
+	                            { className: 'col-xs-6' },
+	                            '小計'
+	                        ),
+	                        React.createElement(
+	                            'div',
+	                            { className: 'col-xs-6' },
+	                            React.createElement(
+	                                'div',
+	                                { className: 'pull-right' },
+	                                'NT$  小計'
+	                            )
+	                        ),
+	                        React.createElement(
+	                            'div',
+	                            { className: 'col-xs-6' },
+	                            '代買費'
+	                        ),
+	                        React.createElement(
+	                            'div',
+	                            { className: 'col-xs-6' },
+	                            React.createElement(
+	                                'div',
+	                                { className: 'pull-right' },
+	                                'NT$  代買費'
+	                            )
+	                        ),
+	                        React.createElement(
+	                            'div',
+	                            { className: 'col-xs-6' },
+	                            '國際運費'
+	                        ),
+	                        React.createElement(
+	                            'div',
+	                            { className: 'col-xs-6' },
+	                            React.createElement(
+	                                'div',
+	                                { className: 'pull-right' },
+	                                'NT$  國際運費'
+	                            )
+	                        )
+	                    )
+	                ),
+	                React.createElement(
+	                    'div',
+	                    { className: 'col-xs-12' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'row totalPrice' },
+	                        React.createElement(
+	                            'div',
+	                            { className: 'col-xs-6' },
+	                            '合計'
+	                        ),
+	                        React.createElement(
+	                            'div',
+	                            { className: 'col-xs-6' },
+	                            React.createElement(
+	                                'div',
+	                                { className: 'pull-right' },
+	                                'NT$  合計'
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return CartPriceBox;
+	})(_react.Component);
+	
+	var CartTitleOn = (function (_Component3) {
+	    _inherits(CartTitleOn, _Component3);
+	
+	    function CartTitleOn() {
+	        _classCallCheck(this, CartTitleOn);
+	
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(CartTitleOn).apply(this, arguments));
+	    }
+	
+	    _createClass(CartTitleOn, [{
+	        key: 'render',
+	        value: function render() {
+	            return React.createElement(
+	                _reactRouter.Link,
+	                { to: '/cartPage' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'row titleOn' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'col-xs-12 text-center' },
+	                        '購物車'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return CartTitleOn;
+	})(_react.Component);
+	
+	var WishListTitleOff = (function (_Component4) {
+	    _inherits(WishListTitleOff, _Component4);
+	
+	    function WishListTitleOff() {
+	        _classCallCheck(this, WishListTitleOff);
+	
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(WishListTitleOff).apply(this, arguments));
+	    }
+	
+	    _createClass(WishListTitleOff, [{
+	        key: 'render',
+	        value: function render() {
+	            return React.createElement(
+	                _reactRouter.Link,
+	                { to: '/wishListPage' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'row titleOff' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'col-xs-12 text-center' },
+	                        '收藏清單'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return WishListTitleOff;
+	})(_react.Component);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(13)))
+
+/***/ },
+/* 245 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.AmountButton = undefined;
+	
+	var _react = __webpack_require__(13);
+	
+	var _reactRedux = __webpack_require__(223);
+	
+	var _redux = __webpack_require__(229);
+	
+	var _index = __webpack_require__(243);
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var CartList = (function (_Component) {
+	    _inherits(CartList, _Component);
+	
+	    function CartList() {
+	        _classCallCheck(this, CartList);
+	
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(CartList).apply(this, arguments));
+	    }
+	
+	    _createClass(CartList, [{
+	        key: 'renderList',
+	        value: function renderList() {
+	            var _this2 = this;
+	
+	            return this.props.cart.map(function (ad, index) {
+	                return React.createElement(
+	                    'div',
+	                    { className: 'col-xs-12 productList', key: index },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'col-xs-5' },
+	                        React.createElement('img', { src: ad.img, className: 'img-responsive' })
+	                    ),
+	                    React.createElement(
+	                        'div',
+	                        { className: 'col-xs-5' },
+	                        React.createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            React.createElement(
+	                                'div',
+	                                { className: 'col-xs-12 productTitle' },
+	                                ad.title
+	                            ),
+	                            React.createElement(
+	                                'div',
+	                                { className: 'col-xs-12 productInfo' },
+	                                ad.info
+	                            ),
+	                            React.createElement(
+	                                'div',
+	                                { className: 'col-xs-12' },
+	                                React.createElement(AmountButton, null)
+	                            ),
+	                            React.createElement(
+	                                'div',
+	                                { className: 'col-xs-12 productPrice' },
+	                                'NT$',
+	                                ad.price
+	                            ),
+	                            React.createElement(
+	                                'div',
+	                                { className: 'col-xs-12 cartWishButton' },
+	                                React.createElement(
+	                                    'button',
+	                                    { type: 'button', onClick: function onClick() {
+	                                            _this2.props.addToWishList(ad);
+	                                            _this2.props.removeFromCart(ad);
+	                                        } },
+	                                    '＋收藏清單'
+	                                )
+	                            )
+	                        )
+	                    ),
+	                    React.createElement(
+	                        'div',
+	                        { className: 'col-xs-2' },
+	                        React.createElement(
+	                            'button',
+	                            { type: 'button', onClick: function onClick() {
+	                                    return _this2.props.removeFromCart(ad);
+	                                } },
+	                            React.createElement('img', { src: '../../img/trash.svg' })
+	                        )
+	                    )
+	                );
+	            });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            if (this.props.cart.length === 0) {
+	                return React.createElement(
+	                    'div',
+	                    null,
+	                    '購物車是空的'
+	                );
+	            }
+	            return React.createElement(
+	                'div',
+	                null,
+	                this.renderList()
+	            );
+	        }
+	    }]);
+	
+	    return CartList;
+	})(_react.Component);
+	
+	var AmountButton = exports.AmountButton = (function (_Component2) {
+	    _inherits(AmountButton, _Component2);
+	
+	    function AmountButton() {
+	        _classCallCheck(this, AmountButton);
+	
+	        var _this3 = _possibleConstructorReturn(this, Object.getPrototypeOf(AmountButton).call(this));
+	
+	        _this3.state = { productAmount: 1 };
+	        _this3.minusOnClick = _this3.minusOnClick.bind(_this3);
+	        _this3.handleChange = _this3.handleChange.bind(_this3);
+	        _this3.plusOnClick = _this3.plusOnClick.bind(_this3);
+	        return _this3;
+	    }
+	
+	    _createClass(AmountButton, [{
+	        key: 'handleChange',
+	        value: function handleChange(event) {
+	            this.setState({ productAmount: event.target.value });
+	        }
+	    }, {
+	        key: 'minusOnClick',
+	        value: function minusOnClick() {
+	            var originalAmount = this.state.productAmount;
+	            this.setState({ productAmount: originalAmount - 1 });
+	        }
+	    }, {
+	        key: 'plusOnClick',
+	        value: function plusOnClick() {
+	            var originalAmount = this.state.productAmount;
+	            this.setState({ productAmount: originalAmount + 1 });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return React.createElement(
+	                'div',
+	                { className: 'amountButton' },
+	                React.createElement(
+	                    'button',
+	                    { className: 'text-center minus', onClick: this.minusOnClick },
+	                    '-'
+	                ),
+	                React.createElement('input', {
+	                    type: 'number',
+	                    className: 'text-center amountInput',
+	                    value: this.state.productAmount,
+	                    onChange: this.handleChange }),
+	                React.createElement(
+	                    'button',
+	                    { className: 'text-center plus', onClick: this.plusOnClick },
+	                    '+'
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return AmountButton;
+	})(_react.Component);
+	
+	function mapStateToProps(state) {
+	    return {
+	        cart: state.cart
+	    };
+	}
+	
+	function mapDispatchToProps(dispatch) {
+	    return (0, _redux.bindActionCreators)({ addToWishList: _index.addToWishList, removeFromCart: _index.removeFromCart }, dispatch);
+	}
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(CartList);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(13)))
+
+/***/ },
+/* 246 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(13);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(171);
+	
+	var _reactRedux = __webpack_require__(223);
+	
+	var _index = __webpack_require__(243);
+	
+	var _redux = __webpack_require__(229);
+	
+	var _productPage = __webpack_require__(221);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var AdList = (function (_Component) {
+	    _inherits(AdList, _Component);
+	
+	    function AdList() {
+	        _classCallCheck(this, AdList);
+	
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(AdList).apply(this, arguments));
+	    }
+	
+	    _createClass(AdList, [{
+	        key: 'renderList',
+	        value: function renderList() {
+	            var _this2 = this;
+	
+	            return this.props.ads.map(function (ad) {
+	                return _react2.default.createElement(
+	                    'div',
+	                    { key: ad.img, onClick: function onClick() {
+	                            return _this2.props.selectAd(ad);
+	                        } },
+	                    _react2.default.createElement(
+	                        _reactRouter.Link,
+	                        { to: '/productPage', className: 'col-xs-12 col-sm-6' },
+	                        _react2.default.createElement('img', { src: ad.img, className: 'img-responsive adList' })
+	                    )
+	                );
+	            });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                this.renderList()
+	            );
+	        }
+	    }]);
+	
+	    return AdList;
+	})(_react.Component);
+	
+	function mapStateToProps(state) {
+	    return {
+	        ads: state.ads
+	    };
+	}
+	
+	function mapDispatchToProps(dispatch) {
+	    return (0, _redux.bindActionCreators)({ selectAd: _index.selectAd }, dispatch);
+	}
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(AdList);
+
+/***/ },
+/* 247 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.CartTitleOff = exports.WishListPage = undefined;
+	
+	var _react = __webpack_require__(13);
+	
+	var _reactRouter = __webpack_require__(171);
+	
+	var _homePage = __webpack_require__(218);
+	
+	var _productPage = __webpack_require__(221);
+	
+	var _wishList = __webpack_require__(248);
+	
+	var _wishList2 = _interopRequireDefault(_wishList);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var WishListPage = exports.WishListPage = (function (_Component) {
+	    _inherits(WishListPage, _Component);
+	
+	    function WishListPage() {
+	        _classCallCheck(this, WishListPage);
+	
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(WishListPage).apply(this, arguments));
+	    }
+	
+	    _createClass(WishListPage, [{
+	        key: 'render',
+	        value: function render() {
+	            return React.createElement(
+	                'div',
+	                { className: 'row' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'col-xs-12' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'row pageTitle' },
+	                        React.createElement(
+	                            'div',
+	                            { className: 'col-xs-6' },
+	                            React.createElement(CartTitleOff, null)
+	                        ),
+	                        React.createElement(
+	                            'div',
+	                            { className: 'col-xs-6' },
+	                            React.createElement(WishListTitleOn, null)
+	                        )
+	                    )
+	                ),
+	                React.createElement(_wishList2.default, null)
+	            );
+	        }
+	    }]);
+	
+	    return WishListPage;
+	})(_react.Component);
+	
+	var WishListTitleOn = (function (_Component2) {
+	    _inherits(WishListTitleOn, _Component2);
+	
+	    function WishListTitleOn() {
+	        _classCallCheck(this, WishListTitleOn);
+	
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(WishListTitleOn).apply(this, arguments));
+	    }
+	
+	    _createClass(WishListTitleOn, [{
+	        key: 'render',
+	        value: function render() {
+	            return React.createElement(
+	                _reactRouter.Link,
+	                { to: '/wishListPage' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'row titleOn' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'col-xs-12 text-center' },
+	                        '收藏清單'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return WishListTitleOn;
+	})(_react.Component);
+	
+	var CartTitleOff = exports.CartTitleOff = (function (_Component3) {
+	    _inherits(CartTitleOff, _Component3);
+	
+	    function CartTitleOff() {
+	        _classCallCheck(this, CartTitleOff);
+	
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(CartTitleOff).apply(this, arguments));
+	    }
+	
+	    _createClass(CartTitleOff, [{
+	        key: 'render',
+	        value: function render() {
+	            return React.createElement(
+	                _reactRouter.Link,
+	                { to: '/cartPage' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'row titleOff' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'col-xs-12 text-center' },
+	                        '購物車'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return CartTitleOff;
+	})(_react.Component);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(13)))
+
+/***/ },
+/* 248 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.AmountButton = undefined;
+	
+	var _react = __webpack_require__(13);
+	
+	var _reactRedux = __webpack_require__(223);
+	
+	var _redux = __webpack_require__(229);
+	
+	var _index = __webpack_require__(243);
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var WishList = (function (_Component) {
+	    _inherits(WishList, _Component);
+	
+	    function WishList() {
+	        _classCallCheck(this, WishList);
+	
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(WishList).apply(this, arguments));
+	    }
+	
+	    _createClass(WishList, [{
+	        key: 'renderList',
+	        value: function renderList() {
+	            var _this2 = this;
+	
+	            return this.props.wishList.map(function (ad, index) {
+	                return React.createElement(
+	                    'div',
+	                    { className: 'col-xs-12 col-lg-6 productList', key: index },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'col-xs-5' },
+	                        React.createElement('img', { src: ad.img, className: 'img-responsive' })
+	                    ),
+	                    React.createElement(
+	                        'div',
+	                        { className: 'col-xs-5' },
+	                        React.createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            React.createElement(
+	                                'div',
+	                                { className: 'col-xs-12 productTitle' },
+	                                ad.title
+	                            ),
+	                            React.createElement(
+	                                'div',
+	                                { className: 'col-xs-12 productInfo' },
+	                                ad.info
+	                            ),
+	                            React.createElement(
+	                                'div',
+	                                { className: 'col-xs-12' },
+	                                React.createElement(AmountButton, null)
+	                            ),
+	                            React.createElement(
+	                                'div',
+	                                { className: 'col-xs-12 productPrice' },
+	                                'NT$',
+	                                ad.price
+	                            ),
+	                            React.createElement(
+	                                'div',
+	                                { className: 'col-xs-12 cartWishButton' },
+	                                React.createElement(
+	                                    'button',
+	                                    { type: 'button', onClick: function onClick() {
+	                                            _this2.props.addToCart(ad);
+	                                            _this2.props.removeFromWishList(ad);
+	                                        } },
+	                                    '＋購物車'
+	                                )
+	                            )
+	                        )
+	                    ),
+	                    React.createElement(
+	                        'div',
+	                        { className: 'col-xs-2' },
+	                        React.createElement(
+	                            'button',
+	                            { type: 'button', onClick: function onClick() {
+	                                    return _this2.props.removeFromWishList(ad);
+	                                } },
+	                            React.createElement('img', { src: '../../img/trash.svg' })
+	                        )
+	                    )
+	                );
+	            });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            if (this.props.wishList.length === 0) {
+	                return React.createElement(
+	                    'div',
+	                    null,
+	                    '收藏清單是空的'
+	                );
+	            }
+	            return React.createElement(
+	                'div',
+	                null,
+	                this.renderList()
+	            );
+	        }
+	    }]);
+	
+	    return WishList;
+	})(_react.Component);
+	
+	var AmountButton = exports.AmountButton = (function (_Component2) {
+	    _inherits(AmountButton, _Component2);
+	
+	    function AmountButton() {
+	        _classCallCheck(this, AmountButton);
+	
+	        var _this3 = _possibleConstructorReturn(this, Object.getPrototypeOf(AmountButton).call(this));
+	
+	        _this3.state = { productAmount: 1 };
+	        _this3.minusOnClick = _this3.minusOnClick.bind(_this3);
+	        _this3.handleChange = _this3.handleChange.bind(_this3);
+	        _this3.plusOnClick = _this3.plusOnClick.bind(_this3);
+	        return _this3;
+	    }
+	
+	    _createClass(AmountButton, [{
+	        key: 'handleChange',
+	        value: function handleChange(event) {
+	            this.setState({ productAmount: event.target.value });
+	        }
+	    }, {
+	        key: 'minusOnClick',
+	        value: function minusOnClick() {
+	            var originalAmount = this.state.productAmount;
+	            this.setState({ productAmount: originalAmount - 1 });
+	        }
+	    }, {
+	        key: 'plusOnClick',
+	        value: function plusOnClick() {
+	            var originalAmount = this.state.productAmount;
+	            this.setState({ productAmount: originalAmount + 1 });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return React.createElement(
+	                'div',
+	                { className: 'amountButton' },
+	                React.createElement(
+	                    'button',
+	                    { className: 'text-center minus', onClick: this.minusOnClick },
+	                    '-'
+	                ),
+	                React.createElement('input', {
+	                    type: 'number',
+	                    className: 'text-center amountInput',
+	                    value: this.state.productAmount,
+	                    onChange: this.handleChange }),
+	                React.createElement(
+	                    'button',
+	                    { className: 'text-center plus', onClick: this.plusOnClick },
+	                    '+'
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return AmountButton;
+	})(_react.Component);
+	
+	function mapStateToProps(state) {
+	    return {
+	        wishList: state.wishList
+	    };
+	}
+	
+	function mapDispatchToProps(dispatch) {
+	    return (0, _redux.bindActionCreators)({ addToCart: _index.addToCart, removeFromWishList: _index.removeFromWishList }, dispatch);
+	}
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(WishList);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(13)))
+
+/***/ },
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -27362,7 +27779,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(13)))
 
 /***/ },
-/* 245 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -27594,7 +28011,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(13)))
 
 /***/ },
-/* 246 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27612,9 +28029,13 @@
 	
 	var _reactRouter = __webpack_require__(171);
 	
-	var _adList = __webpack_require__(223);
+	var _adList = __webpack_require__(246);
 	
 	var _adList2 = _interopRequireDefault(_adList);
+	
+	var _adDetail = __webpack_require__(222);
+	
+	var _adDetail2 = _interopRequireDefault(_adDetail);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -27636,7 +28057,11 @@
 	    _createClass(AdPage, [{
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement(_adList2.default, null);
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(_adList2.default, null)
+	            );
 	        }
 	    }]);
 	
@@ -27644,7 +28069,7 @@
 	})(_react.Component);
 
 /***/ },
-/* 247 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27653,22 +28078,37 @@
 	   value: true
 	});
 	
-	var _redux = __webpack_require__(230);
+	var _redux = __webpack_require__(229);
 	
-	var _reducer_ads = __webpack_require__(248);
+	var _reducer_ads = __webpack_require__(253);
 	
 	var _reducer_ads2 = _interopRequireDefault(_reducer_ads);
+	
+	var _reducer_active_ads = __webpack_require__(254);
+	
+	var _reducer_active_ads2 = _interopRequireDefault(_reducer_active_ads);
+	
+	var _reducer_cart = __webpack_require__(255);
+	
+	var _reducer_cart2 = _interopRequireDefault(_reducer_cart);
+	
+	var _reducer_wishList = __webpack_require__(256);
+	
+	var _reducer_wishList2 = _interopRequireDefault(_reducer_wishList);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var rootReducer = (0, _redux.combineReducers)({
-	   ads: _reducer_ads2.default
+	   ads: _reducer_ads2.default,
+	   activeAd: _reducer_active_ads2.default,
+	   cart: _reducer_cart2.default,
+	   wishList: _reducer_wishList2.default
 	});
 	
 	exports.default = rootReducer;
 
 /***/ },
-/* 248 */
+/* 253 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27681,17 +28121,92 @@
 	    return [{ title: 'shoe',
 	        price: 1015,
 	        color: 'wood',
-	        photo: '../../img/shoe.jpg' }, { title: '2B',
+	        img: '../../img/shoe.jpg' }, { title: '2B',
 	        price: 50,
 	        color: 'black',
-	        photo: '../../img/2B.jpg' }, { title: 'box',
+	        img: '../../img/2B.jpeg' }, { title: 'box',
 	        price: 530,
 	        color: 'gold',
-	        photo: '../../img/box.jpg' }, { title: 'pencil',
+	        img: '../../img/box.jpeg' }, { title: 'pencil',
 	        price: 150,
 	        color: 'green',
-	        photo: '../../img/pencil.jpg' }];
+	        img: '../../img/pencil.jpeg' }];
 	};
+
+/***/ },
+/* 254 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	exports.default = function () {
+	    var state = arguments.length <= 0 || arguments[0] === undefined ? null : arguments[0];
+	    var action = arguments[1];
+	
+	    switch (action.type) {
+	        case 'AD_SELECTED':
+	            return action.payload;
+	    }
+	    return state;
+	};
+
+/***/ },
+/* 255 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	exports.default = function () {
+	    var state = arguments.length <= 0 || arguments[0] === undefined ? [] : arguments[0];
+	    var action = arguments[1];
+	
+	    switch (action.type) {
+	        case 'ADD_TO_CART':
+	            state.push(action.payload);
+	            return [].concat(_toConsumableArray(state));
+	        case 'REMOVE_FROM_CART':
+	            state.splice(state.indexOf(action.payload), 1);
+	            return [].concat(_toConsumableArray(state));
+	    }
+	    return state;
+	};
+	
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+/***/ },
+/* 256 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	exports.default = function () {
+	    var state = arguments.length <= 0 || arguments[0] === undefined ? [] : arguments[0];
+	    var action = arguments[1];
+	
+	    switch (action.type) {
+	        case 'ADD_TO_WISHLIST':
+	            state.push(action.payload);
+	            return [].concat(_toConsumableArray(state));
+	        case 'REMOVE_FROM_WISHLIST':
+	            state.splice(state.indexOf(action.payload), 1);
+	            return [].concat(_toConsumableArray(state));
+	    }
+	    return state;
+	};
+	
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 /***/ }
 /******/ ]);

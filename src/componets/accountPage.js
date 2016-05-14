@@ -1,7 +1,5 @@
-
 import { Component } from 'react'
 import { Link } from 'react-router'
-
 import { AccountButton } from '../../src/componets/homePage.js'
 
 export class AccountPage extends Component {

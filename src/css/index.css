@@ -79,16 +79,16 @@ textarea:focus, input:focus{
     padding: 10px 0 10px 0;
 }
 .page{
-    padding: 0 20px 0 20px;
+    padding: 0 20px 20px 20px;
 }
-.buttonY{
+.titleOn{
     color: white;
     background-color: #00BCD4;
     font-size: 16px;
     padding: 7px 0 7px 0;
     border-bottom: 2px solid #00BCD4;
 }
-.buttonN{
+.titleOff{
     color: #00BCD4;
     background-color: white;
     font-size: 16px;
@@ -96,7 +96,8 @@ textarea:focus, input:focus{
     border-bottom: 2px solid #00BCD4;
 }
 
-/*ProductPage*/
+/*cartPage*/
+
 .productBox{
     border: 1px solid black;
     padding: 0 0 0 0 ;
@@ -138,4 +139,45 @@ input[type=number]::-webkit-outer-spin-button {
 }
 input[type=number] {
     -moz-appearance: textfield;
+}
+
+
+/*ad-list*/
+
+.adList{
+    padding: 7px 7px 7px 7px;
+}
+
+
+/*cartPage*/
+
+.cartList{
+    padding: 15px 0 15px 0;
+}
+
+.cartPriceBox{
+    padding: 15px 0 15px 0;
+    border: 1px solid #E5E5E5;
+}
+
+.generalBtn{
+    padding: 15px 0 15px 0;
+}
+
+.cartBtn{
+    border: none;
+    background-color: #00BCD4;
+    color: white;
+    font-size: 15px;
+    border-radius: 3px 3px 3px 3px;
+    padding: 7px 13px 7px 13px;
+}
+
+.totalPrice{
+    border-top: 1px dashed #E5E5E5;
+    padding: 5px 0 0 0;
+}
+
+.allPrice{
+    padding: 0 0 5px 0;
 }

@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router'
 import { connect } from 'react-redux';
+import { selectAd } from '../actions/index';
+import { bindActionCreators } from 'redux';
+import { ProductPage } from '../../src/componets/productPage'
 
 class AdList extends Component {
-    renderList () {
+    renderList() {
         return this.props.ads.map((ad)=>{
             return(
-                <li key={ad.title}>{ad.title}</li>
+                <div key={ad.img} onClick={()=>this.props.selectAd(ad)}>
+                    <Link to="/productPage" className="col-xs-12 col-sm-6">
+                        <img src={ad.img} className="img-responsive adList"/>
+                    </Link>
+                </div>
             );
         });
     }
+
     render(){
         return(
-            <ul className="col-sm-4">{this.renderList()}</ul>
+            <div>
+                {this.renderList()}
+            </div>
         )
     }
 }
@@ -22,7 +33,11 @@ function mapStateToProps(state){
     };
 }
 
-export default connect(mapStateToProps)(AdList);
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({selectAd:selectAd},dispatch)
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(AdList);
 
 
 

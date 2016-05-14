@@ -3,18 +3,18 @@ export default function (){
         { title: 'shoe',
             price: 1015,
             color: 'wood',
-            photo: '../../img/shoe.jpg'},
+            img: '../../img/shoe.jpg'},
         { title: '2B',
             price: 50,
             color: 'black',
-            photo: '../../img/2B.jpg'},
+            img: '../../img/2B.jpeg'},
         { title: 'box',
             price: 530,
             color: 'gold',
-            photo: '../../img/box.jpg'},
+            img: '../../img/box.jpeg'},
         { title: 'pencil',
             price: 150,
             color: 'green',
-            photo: '../../img/pencil.jpg'}
+            img: '../../img/pencil.jpeg'}
     ];
 }

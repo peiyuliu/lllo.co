@@ -3,7 +3,7 @@ import { Link, IndexLink } from 'react-router'
 
 import { AboutUsLinkBar } from '../../src/componets/aboutUsPage.js'
 import { SearchPage } from '../../src/componets/searchPage.js'
-import { BasketPage } from '../../src/componets/basketPage.js'
+import { CartPage } from '../../src/componets/cartPage.js'
 import AdList from '../../src/containers/ad-list'
 
 export class TitleBar extends Component {
@@ -40,13 +40,13 @@ export class BasketButton extends Component {
     render() {
         if (this.state.empty === true) {
             return (
-                <Link to="/basketPage" className="bButton">
+                <Link to="/cartPage" className="bButton">
                     <img src="../../img/basketEmpty.svg" />
                 </Link>
             )
         } else {
             return (
-                <Link to="/basketPage" className="bButton">
+                <Link to="/cartPage" className="bButton">
                     <img src="../../img/basket.svg"/>
                 </Link>
             )
