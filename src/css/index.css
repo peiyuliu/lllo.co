@@ -73,6 +73,8 @@ textarea:focus, input:focus{
 .aboutUsBox{
     padding-bottom: 5px;
 }
+
+
 /* basketPage */
 
 .pageTitle{
@@ -96,17 +98,10 @@ textarea:focus, input:focus{
     border-bottom: 2px solid #00BCD4;
 }
 
-/*cartPage*/
+/*AmountButton*/
 
-.productBox{
-    border: 1px solid black;
-    padding: 0 0 0 0 ;
-}
-.productItem{
-    padding: 0 5px 0 5px;
-}
 .amountButton{
-    padding: 5px 0 5px 0;
+    padding: 10px 0 10px 0;
 }
 .amountInput{
     width: 35px;
@@ -149,35 +144,84 @@ input[type=number] {
 }
 
 
-/*cartPage*/
+/*ad-detail*/
 
-.cartList{
-    padding: 15px 0 15px 0;
+.adTitle{
+    font-size: 20px;
+    padding-top: 15px ;
+    padding-bottom: 10px;
 }
-
-.cartPriceBox{
-    padding: 15px 0 15px 0;
-    border: 1px solid #E5E5E5;
+.adInfo{
+    font-size: 15px;
+    padding-top: 10px;
 }
-
-.generalBtn{
-    padding: 15px 0 15px 0;
+.adColor{
+    font-size: 13px;
+    padding-top: 10px;
 }
-
-.cartBtn{
+.adPrice{
+    font-size: 15px;
+    padding-top: 10px;
+}
+.irisBlueBtn{
     border: none;
     background-color: #00BCD4;
     color: white;
     font-size: 15px;
     border-radius: 3px 3px 3px 3px;
-    padding: 7px 13px 7px 13px;
+    padding: 10px 13px 7px 13px;
+}
+.adWishBtn{
+    border: none;
+    background-color: white;
+    color: lightgray;
+    font-size: 8px;
+    padding: 10px 0 10px 0;
 }
 
+
+/*cartPage*/
+
+.cartList{
+    padding: 0 0 20px 0;
+}
+.cartPriceBox {
+    padding: 15px 0 15px 0;
+    border: 1px solid #E5E5E5;
+}
+.btnAround{
+    padding: 15px 0 15px 0;
+}
 .totalPrice{
     border-top: 1px dashed #E5E5E5;
     padding: 5px 0 0 0;
 }
-
 .allPrice{
     padding: 0 0 5px 0;
+}
+
+/*cart-list*/
+.cartProductBox{
+    padding: 10px 0 0 0;
+    border-bottom: 1px solid #E5E5E5;
+}
+.cartProductTitle{
+    font-size: 13px;
+    padding: 0 0 5px 0;
+}
+.cartProductColor{
+    font-size: 13px;
+    padding: 0 0 5px 0;
+}
+.cartWishButton{
+    border: none;
+    background-color: white;
+    color: lightgray;
+    font-size: 8px;
+}
+.cartWishButtonOutside{
+    padding: 0 0 5px 0;
+}
+.cartProductPrice{
+    font-size: 13px;
 }

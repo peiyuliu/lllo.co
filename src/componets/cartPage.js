@@ -22,8 +22,8 @@ export class CartPage extends Component {
                 <div className="col-xs-12">
                     <CartPriceBox />
                 </div>
-                <div className="col-xs-12 generalBtn">
-                    <button type="button" className="cartBtn pull-right">結帳</button>
+                <div className="col-xs-12 btnAround">
+                    <button type="button" className="irisBlueBtn pull-right">結帳</button>
                 </div>
             </div>
         );

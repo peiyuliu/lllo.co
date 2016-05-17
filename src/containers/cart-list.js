@@ -8,36 +8,36 @@ class CartList extends Component {
     renderList() {
         return this.props.cart.map((ad, index)=>{
             return(
-                <div className="col-xs-12 productList" key={index}>
+                <div className="row" key={index}>
                     <div className="col-xs-5">
                         <img src={ad.img} className="img-responsive"/>
                     </div>
-                    <div className="col-xs-5">
+                    <div className="col-xs-7">
                         <div className="row">
-                            <div className="col-xs-12 productTitle">
+                            <div className="col-xs-12 cartProductTitle">
                                 {ad.title}
                             </div>
-                            <div className="col-xs-12 productInfo">
-                                {ad.info}
+                            <div className="col-xs-8 cartProductColor">
+                                {ad.color}
+                            </div>
+                            <div className="col-xs-4">
+                                <button type="button" onClick={()=>this.props.removeFromCart(ad)}>
+                                    <img src="../../img/trash.svg"/>
+                                </button>
+                            </div>
+                            <div className="col-xs-8 cartWishButtonOutside">
+                                <button type="button" className="cartWishButton" onClick={()=>{
+                                            this.props.addToWishList(ad)
+                                            this.props.removeFromCart(ad)
+                                            }}>＋收藏清單</button>
                             </div>
                             <div className="col-xs-12">
                                 <AmountButton />
                             </div>
-                            <div className="col-xs-12 productPrice">
-                                NT${ad.price}
-                            </div>
-                            <div className="col-xs-12 cartWishButton">
-                                <button type="button" onClick={()=>{
-                                this.props.addToWishList(ad)
-                                this.props.removeFromCart(ad)
-                                }}>＋收藏清單</button>
+                            <div className="col-xs-12 cartProductPrice">
+                                NT$ {ad.price}
                             </div>
                         </div>
-                    </div>
-                    <div className="col-xs-2">
-                        <button type="button" onClick={()=>this.props.removeFromCart(ad)}>
-                            <img src="../../img/trash.svg"/>
-                        </button>
                     </div>
                 </div>
             )
@@ -49,7 +49,7 @@ class CartList extends Component {
             return <div>購物車是空的</div>
         }
         return(
-            <div>
+            <div className="col-xs-12 cartProductBox">
                 {this.renderList()}
             </div>
         )

@@ -1,8 +1,9 @@
 export default function (){
     return[
-        { title: 'shoe',
+        { title: '手工流線造型木製拖鞋',
             price: 1015,
-            color: 'wood',
+            color: '咖啡色木紋、黑皮革',
+            info: '木製拖鞋，鞋底利用曲木一體成型，配皮革鞋面，貼合每個人的腳型，越穿越舒適。',
             img: '../../img/shoe.jpg'},
         { title: '2B',
             price: 50,
