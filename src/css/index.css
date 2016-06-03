@@ -23,6 +23,20 @@
     height: 70px;
 }
 
+.noUnderline:hover {
+    text-decoration: none;
+}
+
+.shopNowOutside{
+    padding: 30px 0 30px 0;
+}
+.shopNow{
+    font-size: 15px;
+    color: #00BCD4;
+    border: 1px solid #00BCD4;
+    padding: 15px 25px 15px 25px;
+}
+
 /* SearchPage */
 
 .searchPage{
@@ -224,4 +238,9 @@ input[type=number] {
 }
 .cartProductPrice{
     font-size: 13px;
+}
+
+.allProductListImg{
+    height: 200px;
+    width: 200px;
 }

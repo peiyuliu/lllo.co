@@ -4,7 +4,8 @@ import { Link, IndexLink } from 'react-router'
 import { AboutUsLinkBar } from '../../src/componets/aboutUsPage.js'
 import { SearchPage } from '../../src/componets/searchPage.js'
 import { CartPage } from '../../src/componets/cartPage.js'
-import AdList from '../../src/containers/ad-list'
+import { AllProductPage } from '../../src/componets/productPage'
+import { AdPage } from '../../src/componets/advertisementPage'
 
 export class TitleBar extends Component {
     render() {
@@ -80,12 +81,13 @@ export class FrontPage extends Component {
     render() {
         return (
             <div className="row">
-                <div className="col-xs-12 frontPage">
-                    <Link to="searchPage" className="text-center center-block">
-                        <div className="textHelpBuy">在地人幫你買</div>
-                        <img id="searchButton" src="img/searchButton.svg"/>
+                <div className="col-xs-12 text-center shopNowOutside">
+                    <Link to="/allProductPage" className="noUnderline">
+                        <span className="shopNow">SHOP NOW</span>
                     </Link>
-                    <Link to="adPage">Advertisement Page</Link>
+                </div>
+                <div className="col-xs-12">
+                    <AdPage />
                 </div>
             </div>
         )
@@ -94,3 +96,8 @@ export class FrontPage extends Component {
 
 
 
+// <Link to="searchPage" className="text-center center-block">
+//<div className="textHelpBuy">在地人幫你買</div>
+//<img id="searchButton" src="img/searchButton.svg"/>
+//</Link>
+//<Link to="adPage">Advertisement Page</Link>

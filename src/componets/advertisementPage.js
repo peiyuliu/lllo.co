@@ -12,3 +12,13 @@ export class AdPage extends Component {
         )
     }
 }
+
+export class AdDetailPage extends Component{
+    render(){
+        return(
+            <div>
+                <AdDetail />
+            </div>
+        )
+    }
+}

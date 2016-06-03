@@ -1,11 +1,20 @@
 import { Component } from 'react'
 import { Link } from 'react-router'
-import AdDetail from '../containers/ad-detail';
+import AllProductList from '../containers/all-product-list'
+import ProductDetail from '../containers/product-detail'
 
-export class ProductPage extends Component {
+export class AllProductPage extends Component {
     render(){
         return(
-            <AdDetail />
+            <AllProductList />
             )
+    }
+}
+
+export class ProductDetailPage extends Component{
+    render(){
+        return(
+            <ProductDetail />
+        )
     }
 }
